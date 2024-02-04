@@ -6,6 +6,8 @@ class AppRouteName {
   static const String success = "/success";
   static const String login = "/login";
 static const String loginContinue = "/loginContinue"; 
+static const String reservationDestination = "/reservationDestination"; 
+static const String reservationTime = "/reservationTime"; 
 }
 
 
