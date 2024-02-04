@@ -4,11 +4,11 @@ import 'package:get/get.dart';
 import 'package:tyasart/controller/auth/login_continue_controller.dart';
 import 'package:tyasart/view/widgets/auth/login_continue/main_information/input_section_main_info.dart';
 import 'package:tyasart/view/widgets/auth/login_continue/main_information/stipper_main_info.dart';
-import '../widgets/auth/headline.dart';
-import '../widgets/auth/login_continue/stipper_headline.dart';
-import '../widgets/auth/login_continue/sub_information/input_section_sub_info.dart';
-import '../widgets/auth/login_continue/sub_information/stipper_sub_info.dart';
-import '../widgets/auth/shadow_component.dart';
+import '../../widgets/auth/headline.dart';
+import '../../widgets/auth/login_continue/stipper_headline.dart';
+import '../../widgets/auth/login_continue/sub_information/input_section_sub_info.dart';
+import '../../widgets/auth/login_continue/sub_information/stipper_sub_info.dart';
+import '../../widgets/auth/shadow_component.dart';
 
 class LoginContinue extends StatelessWidget {
   const LoginContinue({super.key});

@@ -6,7 +6,7 @@ import '../../view/screen/reservation/reservation_time_and_checkout.dart';
 import '../../view/screen/reservation/reservayion_destination.dart';
 import '../../view/screen/auth/login.dart';
 import '../../view/screen/auth/verify_code.dart';
-import '../../view/screen/login_continue.dart';
+import '../../view/screen/auth/login_continue.dart';
 import '../../view/screen/onboarding/onboarding.dart';
 import 'app_routes_name.dart';
 
