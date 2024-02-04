@@ -43,7 +43,7 @@ class VerifyCode extends StatelessWidget {
                     x: 1,
                     y: 1,
                   )),
-              const ArrowBack(),
+             
              SingleChildScrollView(
           reverse: true,
                 child: Column(
@@ -64,6 +64,7 @@ class VerifyCode extends StatelessWidget {
                   ],
                 ),
               ),
+               const ArrowBack(),
             ],
           ),
         ));

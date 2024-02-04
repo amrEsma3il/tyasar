@@ -5,10 +5,10 @@ import 'package:get/get.dart';
 import '../../../config/themes/styles.dart';
 import '../../../controller/onboarding/onboarding_controller.dart';
 import '../../../core/constant/color.dart';
-import '../../widgets/onboarding/base_back_container.dart';
 import '../../../core/utilits/widgets/customSubmattiedbutton.dart';
+import '../../widgets/onboarding/base_back_container.dart';
 import '../../widgets/onboarding/dotcontroller.dart';
-import '../../widgets/onboarding/skip_button.dart';
+import '../../../core/utilits/widgets/skip_button.dart';
 import '../../widgets/onboarding/slider/customslider.dart';
 
 class OnBoarding extends StatelessWidget {
