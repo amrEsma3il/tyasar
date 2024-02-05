@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tyasart/core/constant/color.dart';
 
 class TextStyles {
-  static TextStyle font24Black700Weight = TextStyle(
+  static TextStyle font22Black400Weight = TextStyle(
     fontSize: 22.sp,
     fontWeight: FontWeight.w400,
     color: Colors.black,
@@ -27,6 +27,12 @@ class TextStyles {
     color: AppColor.primaryColor,
     
   );
+   static TextStyle font16greenSoft = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w700,
+    color: AppColor.softGreen,
+    
+  );
 
   static TextStyle font13GrayRegular = TextStyle(
     fontSize: 13.sp,
@@ -43,9 +49,9 @@ class TextStyles {
 
 
     static TextStyle font13blueSemiBold = TextStyle(
-    fontSize: 13.sp,
+    fontSize: 14.sp,
     fontWeight: FontWeight.w400,
-    color: Colors.black.withOpacity(0.5),
+    color:const Color(0xFF535353),
     decoration: TextDecoration. underline
   );
 

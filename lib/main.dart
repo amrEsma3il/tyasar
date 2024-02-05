@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:tyasart/core/constant/color.dart';
 import 'config/routing/app_router_configuration.dart';
 import 'injection_container.dart';
 
@@ -25,6 +26,8 @@ class Tyasart extends StatelessWidget {
         title: 'Flutter Demo',
         getPages: routes,
     theme: ThemeData(
+      inputDecorationTheme: const InputDecorationTheme(suffixIconColor:AppColor.iconsColor
+    ),
     primarySwatch: Colors.green,
     fontFamily: 'ibmPlexSens',
   ),
