@@ -43,7 +43,7 @@ class OnBoarding extends StatelessWidget {
                         ]
                       ))
                 ]),
-                 const SkipButton()
+                  SkipButton()
               ],
             ),
           ),

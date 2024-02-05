@@ -27,12 +27,12 @@ if(fourthDigit.text+thirdDigit.text+secondtDigit.text+firstDigit.text=="1234")
 
 {
   borderColor=AppColor.primaryColor;
-  borderWidth=3;
+  borderWidth=1.3;
  Get.toNamed(AppRouteName.loginContinue);
 
 }else{
   borderColor=AppColor.red;
-  borderWidth=3;
+  borderWidth=1.3;
 
 }
 
