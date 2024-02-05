@@ -11,7 +11,6 @@ class AppColor {
   static const Color softGray = Color(0xFFE4DFDF);
    static const Color red = Color.fromARGB(255, 207, 103, 121);
    static const Color gray = Color(0xFF757575);
-static const  softGreen = Color(0xFF49BEB7);
-static const  iconsColor = Color(0xFFCCCCCC);
+
 
 }

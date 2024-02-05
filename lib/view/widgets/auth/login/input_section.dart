@@ -8,7 +8,7 @@ import '../../../../config/themes/styles.dart';
 import '../../../../core/constant/color.dart';
 import '../../../../core/constant/imgaeasset.dart';
 import '../../../../core/utilits/widgets/customSubmattiedbutton.dart';
-import '../../../../core/utilits/widgets/custom_text_field.dart';
+import '../custom_text_field.dart';
 
 class InputSection extends StatelessWidget {
   const InputSection({
@@ -87,10 +87,10 @@ class InputSection extends StatelessWidget {
                                     .copyWith(fontSize: 19),
                               ),
                             ),
-                           const Icon(
-                                Icons.arrow_drop_down_rounded,
-                                size: 25,color: AppColor.iconsColor,
-                              ),
+                            const Icon(
+                              Icons.arrow_drop_down_rounded,
+                              size: 25,
+                            ),
                                const SizedBox(width: 8,),
                           ]),
                     ),

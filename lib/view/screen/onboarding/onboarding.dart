@@ -43,11 +43,7 @@ class OnBoarding extends StatelessWidget {
                         ]
                       ))
                 ]),
-                  SkipButton(
-                    onPressed: () {
-                       Get.find<OnBoardingController>().skipEvent();
-                    },
-                  )
+                  SkipButton()
               ],
             ),
           ),

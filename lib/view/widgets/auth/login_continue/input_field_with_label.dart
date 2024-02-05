@@ -4,8 +4,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../config/themes/styles.dart';
-import 'custom_text_field.dart';
+import '../../../../config/themes/styles.dart';
+import '../custom_text_field.dart';
 
 class InputFieldWithLabel extends StatelessWidget {
 final int? maxLines;

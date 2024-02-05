@@ -27,12 +27,6 @@ class TextStyles {
     color: AppColor.primaryColor,
     
   );
-   static TextStyle font16greenSoft = TextStyle(
-    fontSize: 16.sp,
-    fontWeight: FontWeight.w700,
-    color: AppColor.softGreen,
-    
-  );
 
   static TextStyle font13GrayRegular = TextStyle(
     fontSize: 13.sp,
@@ -51,7 +45,7 @@ class TextStyles {
     static TextStyle font13blueSemiBold = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeight.w400,
-    color:const Color(0xFF535353),
+    color: Colors.black.withOpacity(0.5),
     decoration: TextDecoration. underline
   );
 

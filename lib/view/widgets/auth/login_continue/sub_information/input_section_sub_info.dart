@@ -9,7 +9,7 @@ import '../../../../../controller/auth/login_continue_controller.dart';
 import '../../../../../core/constant/color.dart';
 import '../../../../../core/constant/imgaeasset.dart';
 import '../../../../../core/utilits/widgets/customSubmattiedbutton.dart';
-import '../../../../../core/utilits/widgets/input_field_with_label.dart';
+import '../input_field_with_label.dart';
 
 
 
@@ -128,7 +128,7 @@ class SubInformation extends StatelessWidget {
                               ),
                               const Icon(
                                 Icons.arrow_drop_down_rounded,
-                                size: 25,color: AppColor.iconsColor,
+                                size: 25,
                               ),
                                  const SizedBox(width: 8,),
                             ]),

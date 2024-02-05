@@ -19,7 +19,7 @@ class StipperSubInfo extends StatelessWidget {
         const CircleAvatar(
             backgroundColor: AppColor.primaryColor,
             radius: 8,
-            child:Icon(Icons.check,size: 16,color: Colors.white,)),
+            child:Icon(Icons.check,size: 16,)),
         Container(
          
           width: 247.w,
