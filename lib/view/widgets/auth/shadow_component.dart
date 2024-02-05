@@ -15,7 +15,7 @@ class ShadowComponent extends StatelessWidget {
     decoration:  BoxDecoration(
       boxShadow: [
         BoxShadow(
-          color:const Color.fromARGB(255, 210, 241, 235) ,
+          color:const Color.fromARGB(255, 217, 235, 231) ,
           blurRadius:blur, // Set the blur radius
           spreadRadius: spread, // Set the spread radius
           offset:  Offset(x,y), // Set the shadow offset

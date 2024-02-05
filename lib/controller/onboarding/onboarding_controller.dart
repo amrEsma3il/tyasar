@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-import '../config/routing/app_routes_name.dart';
-import '../data/datasource/static/static.dart';
+import '../../config/routing/app_routes_name.dart';
+import '../../data/datasource/static/onboarding/onboarding_static_data_sourse.dart';
 
 class OnBoardingController extends GetxController {
   late PageController pageController;

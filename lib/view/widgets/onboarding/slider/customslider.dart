@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../controller/onboarding_controller.dart';
-import '../../../../data/datasource/static/static.dart';
+import '../../../../controller/onboarding/onboarding_controller.dart';
+import '../../../../data/datasource/static/onboarding/onboarding_static_data_sourse.dart';
 import 'pageviewComponent.dart';
 
 class CustomSliderOnBoarding extends StatelessWidget {

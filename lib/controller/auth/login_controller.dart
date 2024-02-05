@@ -1,13 +1,20 @@
 
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../config/routing/app_routes_name.dart';
 
+
 class LoginController  extends  GetxController{
 
-TextEditingController? phoneNumber;
+
+
+ LayerLink?  linkLayer;
+OverlayEntry? entry;
+
+static TextEditingController phoneNumber=TextEditingController();
+
+FocusNode textFieldFocus=FocusNode();
 
 nextEvent(){
 
@@ -15,9 +22,19 @@ nextEvent(){
   Get.toNamed(AppRouteName.loginContinue);
 }
 
+
+
+
+
+
+
 @override
   void onInit() {
-    phoneNumber=TextEditingController();
+
+
+
+  linkLayer=LayerLink();
+    linkLayer=LayerLink();
     super.onInit();
   }
   

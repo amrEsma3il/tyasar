@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../../config/themes/styles.dart';
-import '../../../controller/onboarding_controller.dart';
+import '../../../controller/onboarding/onboarding_controller.dart';
 
 class SkipButton extends StatelessWidget {
   const SkipButton({

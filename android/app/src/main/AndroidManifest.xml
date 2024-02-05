@@ -40,4 +40,12 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+
+     <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="google.navigation" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent>
+    </queries>
 </manifest>

@@ -18,7 +18,7 @@ class TitlesSection extends StatelessWidget {
        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                      children: [
       Text(
-      "تسجيل الدخول",style:TextStyles.font24Black700Weight.copyWith(letterSpacing: -2,
+      "تسجيل الدخول",style:TextStyles.font22Black400Weight.copyWith(letterSpacing: -2,
         fontSize: 30,fontWeight: FontWeight.w700),textAlign:TextAlign.center),
       SizedBox(height: 10.h,),
                      SizedBox(width: 319.w,

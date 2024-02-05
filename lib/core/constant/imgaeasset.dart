@@ -11,5 +11,7 @@ class AppImageAsset {
   static const String blurThree  = "$rootImages/blur3.png" ;  
   static const String phone  = "$rootImages/phone.svg" ;
     static const String egypt  = "$rootImages/egypt.svg" ;
+     static const String verifyCoed  = "$rootImages/verify_code.png";
 
+ static const String backArrow  = "$rootImages/Back.svg";
 }

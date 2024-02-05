@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../config/themes/styles.dart';
-import '../../../../data/model/onboardingmodel.dart';
+import '../../../../data/model/onboarding/onboardingmodel.dart';
 
 
 
@@ -37,15 +37,15 @@ class PageViewComponent extends StatelessWidget {
               width: 295.w,
               height: 36.h,
               child: Text(onboardingComponent.title!,
-              style:TextStyles.font24Black700Weight
+              style:TextStyles.font22Black400Weight
               ),
             ),
-             SizedBox(height: 18.h),
+             SizedBox(height: 10.h),
       
              Container(
                 alignment: Alignment.center,
               width: 295.w,
-              height: 54.h,
+              height: 50.h,
               child: Text(
                 onboardingComponent.body!,
                 textAlign: TextAlign.center,

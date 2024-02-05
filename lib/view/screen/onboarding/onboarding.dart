@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../../config/themes/styles.dart';
-import '../../controller/onboarding_controller.dart';
-import '../../core/constant/color.dart';
-import '../widget/onboarding/base_back_container.dart';
-import '../../core/utilits/widgets/customSubmattiedbutton.dart';
-import '../widget/onboarding/dotcontroller.dart';
-import '../widget/onboarding/skip_button.dart';
-import '../widget/onboarding/slider/customslider.dart';
+import '../../../config/themes/styles.dart';
+import '../../../controller/onboarding/onboarding_controller.dart';
+import '../../../core/constant/color.dart';
+import '../../../core/utilits/widgets/customSubmattiedbutton.dart';
+import '../../widgets/onboarding/base_back_container.dart';
+import '../../widgets/onboarding/dotcontroller.dart';
+import '../../../core/utilits/widgets/skip_button.dart';
+import '../../widgets/onboarding/slider/customslider.dart';
 
 class OnBoarding extends StatelessWidget {
   const OnBoarding({Key? key}) : super(key: key);
@@ -22,11 +22,11 @@ class OnBoarding extends StatelessWidget {
         body: SafeArea(
           child: Padding(
             padding:  EdgeInsets.only(top: 10.h),
-            child:  const Stack(
+            child:   Stack(
               children: [
-                 BaseBackgroundContainer(),
+           const  BaseBackgroundContainer(),
                 Column(children: [
-                   Expanded(
+                   const Expanded(
                     flex: 4,
                     child: CustomSliderOnBoarding(),
                   ),
@@ -34,20 +34,51 @@ class OnBoarding extends StatelessWidget {
                       flex: 1,
                       child: 
                       Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          OnboardingButton(),
-                           CustomDotControllerOnBoarding(),
+                            SizedBox(height: 15.h,),
+                     const     OnboardingButton(),
+                        
+                           const CustomDotControllerOnBoarding(),
                         ]
                       ))
                 ]),
-                 SkipButton()
+                 const SkipButton()
               ],
             ),
           ),
         ));
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

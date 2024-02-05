@@ -13,7 +13,7 @@ class BaseBackgroundContainer extends StatelessWidget {
       left: 0.w,
       child: Container(
         width: 375.w,
-        height: 288.h,
+        height: 300.h,
         decoration: const BoxDecoration(
             color: Color(0xFFE9FDF5),
             borderRadius: BorderRadius.only(
