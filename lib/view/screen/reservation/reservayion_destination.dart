@@ -8,7 +8,6 @@ import 'package:tyasart/view/widgets/auth/verify_code/headline_and_info.dart';
 import '../../../core/constant/imgaeasset.dart';
 import '../../../core/utilits/widgets/skip_button.dart';
 import '../../widgets/auth/shadow_component.dart';
-import '../../widgets/auth/verify_code/arrow_back.dart';
 import '../../widgets/auth/verify_code/input_section.dart';
 
 
