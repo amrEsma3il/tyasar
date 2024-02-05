@@ -17,7 +17,7 @@ class VerifyCodeDigit extends StatelessWidget {
   final Color? colorValidation;
   final TextEditingController controller;
 
-   VerifyCodeDigit({
+   const VerifyCodeDigit({
     super.key, this.first, this.last, this.colorValidation, required this.controller,
   });
 

@@ -48,7 +48,6 @@ class InputSection extends StatelessWidget {
             width: 343.w,
             height: 56.h,
             onPressed: () {
-              // Get.toNamed(AppRouteName.verifyCode);
     
               Get.find<VerifyController>().nextEvent();
             },
@@ -71,7 +70,7 @@ class InputSection extends StatelessWidget {
                         const TextSpan(text: "سوف تصلك رسالة في "),
                         const TextSpan(
                             text: " 05 : 02  ",
-                            style: TextStyle(color: AppColor.primaryColor)),
+                            style: TextStyle(color: AppColor.softGreen,  fontWeight: FontWeight.w700,)),
                         const TextSpan(text: "دقيقة \n"),
                         TextSpan(
                             text: " إعادة ارسال ",
@@ -79,17 +78,11 @@ class InputSection extends StatelessWidget {
                               ..onTap = () {
                                 Get.find<VerifyController>().resendEvent();
                               },
-                            style: const TextStyle(
-                                color: AppColor.primaryColor,
-                                decoration: TextDecoration.underline)),
+                            style: TextStyles.font16greenSoft.copyWith(  decoration: TextDecoration.underline)
+                              ),
                         const TextSpan(text: " إن لم تصلك رسالة التأكيد بعد "),
                       ]))
-              //  Text(
-              //   textAlign: TextAlign.center,
-              //   "سوف تصلك رسالة في 02 : 05  دقيقة \n إعادة ارسال إن لم تصلك رسالة التأكيد بعد",
-              //   style: TextStyles.font13blueSemiBold.copyWith(decoration:TextDecoration.none ),
-    
-              //  )
+       
     
               ),
         ],
