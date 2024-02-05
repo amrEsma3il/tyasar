@@ -9,7 +9,7 @@ import '../../../../../controller/auth/login_continue_controller.dart';
 import '../../../../../core/constant/color.dart';
 import '../../../../../core/constant/imgaeasset.dart';
 import '../../../../../core/utilits/widgets/customSubmattiedbutton.dart';
-import '../input_field_with_label.dart';
+import '../../../../../core/utilits/widgets/input_field_with_label.dart';
 
 
 
@@ -29,7 +29,7 @@ class SubInformation extends StatelessWidget {
               children: [
                      const InputFieldWithLabel(hint: "ذكر",label:"الجنس",width: 163),
                   InputFieldWithLabel(hint: "23-4-1994",label: "تاريخ الميلاد",width: 163,
-    paddingBottom: 13,
+          paddingBottom: 13.h,
                   suffix: Padding(
                     padding: const EdgeInsets.only(left: 35),
                     child: InkWell(onTap: () {
@@ -41,7 +41,7 @@ class SubInformation extends StatelessWidget {
                   ),
             ]),
                    InputFieldWithLabel(
-                    paddingBottom: 13,
+                    paddingBottom: 13.h,
                                     suffix: Padding(
                     padding: const EdgeInsets.only(left: 35),
                     child: InkWell(onTap: () {
@@ -53,7 +53,7 @@ class SubInformation extends StatelessWidget {
                    
                     
                     hint: "ادخل هنا الموقع الجغرافي",label: "الموقع الجغرافي",),
-    
+          
                              Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -72,7 +72,7 @@ class SubInformation extends StatelessWidget {
                      
                      ),
                   InputFieldWithLabel(hint: "سمعية",label: "نوع الاعاقة",width: 163,
-    paddingBottom: 13,
+          paddingBottom: 13.h,
                   suffix: Padding(
                     padding: const EdgeInsets.only(left: 35),
                     child: InkWell(onTap: () {
@@ -84,7 +84,7 @@ class SubInformation extends StatelessWidget {
                   ),
             ]),
                      InputFieldWithLabel(
-                    paddingBottom: 13,
+                    paddingBottom: 13.h,
                                     suffix: Padding(
                     padding: const EdgeInsets.only(left: 35),
                     child: InkWell(onTap: () {
@@ -96,7 +96,7 @@ class SubInformation extends StatelessWidget {
                    
                     
                     hint: "صحي",label: "نوع المرافقة",),
-    
+          
                            Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -128,14 +128,14 @@ class SubInformation extends StatelessWidget {
                               ),
                               const Icon(
                                 Icons.arrow_drop_down_rounded,
-                                size: 25,
+                                size: 25,color: AppColor.iconsColor,
                               ),
                                  const SizedBox(width: 8,),
                             ]),
                       ),
               ),
             ]),
-    
+          
        InputFieldWithLabel(
                  
                    height: 81.h,
@@ -158,7 +158,7 @@ class SubInformation extends StatelessWidget {
                       style: TextStyles.font16WhiteSemiBold,
                     ),
                   ),
-    
+          
              ],),
     );
   }

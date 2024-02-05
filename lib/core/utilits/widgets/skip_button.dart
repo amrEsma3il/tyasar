@@ -1,22 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-
 import '../../../config/themes/styles.dart';
-import '../../../controller/onboarding/onboarding_controller.dart';
 
+
+// ignore: must_be_immutable
 class SkipButton extends StatelessWidget {
-  const SkipButton({
-    super.key,
-  });
+  double? left,top;
+   void Function()? onPressed;
+
+  
+   SkipButton({
+    required this.onPressed,
+    Key? key,
+    this.left=-1
+    ,this.top=-13,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      left: -1.w, top: -13.h,
-      child: TextButton(onPressed: (){
-       Get.find<OnBoardingController>().skipEvent();
-      }, child: Text("تخطي",style:TextStyles.font13blueSemiBold)),
+      left: left!.w, top:top!.h,
+      child: TextButton(onPressed: onPressed
+      // (){
+      //  Get.find<OnBoardingController>().skipEvent();
+
+      // }
+      ,
+       child: Text("تخطي",style:TextStyles.font13blueSemiBold)),
     );
   }
 }

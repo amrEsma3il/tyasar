@@ -7,7 +7,7 @@ import 'package:tyasart/controller/auth/login_continue_controller.dart';
 import '../../../../../config/themes/styles.dart';
 import '../../../../../core/constant/color.dart';
 import '../../../../../core/utilits/widgets/customSubmattiedbutton.dart';
-import '../input_field_with_label.dart';
+import '../../../../../core/utilits/widgets/input_field_with_label.dart';
 
 class MainInformation extends StatelessWidget {
   const MainInformation({super.key});
