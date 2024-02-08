@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../../../config/routing/app_routes_name.dart';
-import '../../../config/themes/styles.dart';
-import '../../../controller/reservation/reservation_location_controller.dart';
-import '../../../core/constant/color.dart';
-import '../../../core/utilits/widgets/customSubmattiedbutton.dart';
-import '../../../core/utilits/widgets/input_field_with_label.dart';
+import '../../../../config/routing/app_routes_name.dart';
+import '../../../../config/themes/styles.dart';
+import '../../../../controller/reservation/reservation_location_controller.dart';
+import '../../../../core/constant/color.dart';
+import '../../../../core/utilits/widgets/custom_submattied_button.dart';
+import '../../../../core/utilits/widgets/input_field_with_label.dart';
+
 
 class InputSection extends StatelessWidget {
   const InputSection({
@@ -22,7 +23,7 @@ class InputSection extends StatelessWidget {
         InputFieldWithLabel(
           paddingBottom: 13.h,
           suffix: Padding(
-            padding: const EdgeInsets.only(left: 35),
+            padding:  EdgeInsets.only(left: 35.w),
             child: InkWell(
                 onTap: () {},
                 child: const Icon(Icons.location_on_outlined, size: 30)),
@@ -33,7 +34,7 @@ class InputSection extends StatelessWidget {
         InputFieldWithLabel(
           paddingBottom: 13.h,
           suffix: Padding(
-            padding: const EdgeInsets.only(left: 35),
+            padding:  EdgeInsets.only(left: 35.w),
             child: InkWell(
                 onTap: () {
                   //  IntentUtils.launchGoogleMaps;
@@ -46,23 +47,23 @@ class InputSection extends StatelessWidget {
         Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
           SizedBox(
             width: Get.width,
-            height: 10,
+            height: 10.h,
           ),
           Text("+إضافة واجهة اخري",
               style: TextStyles.font16greenSoft.copyWith(height: 0.7)),
           Container(
-            width: 145,
-            height: 1.5,
+            width: 122.w,
+            height: 1.5.h,
             color: AppColor.softGreen,
           )
         ]),
-        const SizedBox(
-          height: 37,
+         SizedBox(
+          height: 37.h,
         ),
         CustomSubmattiedButton(
           colorButtom: AppColor.primaryColor,
           width: 343.w,
-          height: 56.h,
+          height:56.h ,
           onPressed: () {
             Get.toNamed(AppRouteName.reservationTime);
 

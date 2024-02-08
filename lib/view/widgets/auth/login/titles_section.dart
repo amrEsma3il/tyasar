@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../config/themes/styles.dart';
 
-class TitlesSection extends StatelessWidget {
-  const TitlesSection({
+class LoginTitlesSection extends StatelessWidget {
+  const LoginTitlesSection({
     super.key,
   });
 

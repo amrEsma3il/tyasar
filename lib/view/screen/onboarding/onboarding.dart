@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import '../../../config/themes/styles.dart';
 import '../../../controller/onboarding/onboarding_controller.dart';
 import '../../../core/constant/color.dart';
-import '../../../core/utilits/widgets/customSubmattiedbutton.dart';
+import '../../../core/utilits/widgets/custom_submattied_button.dart';
 import '../../widgets/onboarding/base_back_container.dart';
 import '../../widgets/onboarding/dotcontroller.dart';
 import '../../../core/utilits/widgets/skip_button.dart';

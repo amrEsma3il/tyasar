@@ -13,5 +13,9 @@ class AppColor {
    static const Color gray = Color(0xFF757575);
 static const  softGreen = Color(0xFF49BEB7);
 static const  iconsColor = Color(0xFFCCCCCC);
+static const  bluishGray =Color(0xFF8A96BC);
+static const  lightShadeGrayishBlue =Color(0xFFF5F6FA);
+static const  lightShadeGreen =Color(0xFFE9FEF5);
+
 
 }

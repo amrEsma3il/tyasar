@@ -18,21 +18,27 @@ class Tyasart extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       minTextAdapt: true,
+      splitScreenMode: true,
       designSize: const Size(375, 812),
-      child: GetMaterialApp(
-        initialBinding: AppBindings(),
-        locale: const Locale('ar'),
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        getPages: routes,
-    theme: ThemeData(
-      inputDecorationTheme: const InputDecorationTheme(suffixIconColor:AppColor.iconsColor
-    ),
-    primarySwatch: Colors.green,
-    fontFamily: 'ibmPlexSens',
-  ),
-      
-      ),
+      builder: (context, child) {
+        
+        
+        return GetMaterialApp(
+          
+          initialBinding: AppBindings(),
+          locale: const Locale('ar'),
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          getPages: routes,
+            theme: ThemeData(
+        inputDecorationTheme: const InputDecorationTheme(suffixIconColor:AppColor.iconsColor
+            ),
+            primarySwatch: Colors.green,
+            fontFamily: 'ibmPlexSens',
+          ),
+        
+        );},
+      // child:
     );
   }
 }

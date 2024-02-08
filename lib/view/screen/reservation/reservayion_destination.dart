@@ -3,11 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tyasart/controller/reservation/reservation_location_controller.dart';
 import '../../../core/constant/imgaeasset.dart';
+import '../../../core/utilits/widgets/screen_shadow_corner_effect.dart';
 import '../../../core/utilits/widgets/skip_button.dart';
-import '../../widgets/auth/shadow_component.dart';
+import '../../widgets/reservation/reservation_location/headline_and_info.dart';
+import '../../widgets/reservation/reservation_location/input_section.dart';
 
-import '../../widgets/reservation/headline_and_info.dart';
-import '../../widgets/reservation/input_section.dart';
+
 
 class ReservationDestination extends StatelessWidget {
   const ReservationDestination({Key? key}) : super(key: key);
@@ -23,33 +24,13 @@ class ReservationDestination extends StatelessWidget {
       height: MediaQuery.of(context).size.height,
       child: Stack(
         children: [
-          Positioned(
-              top: 5.h,
-              right: 5.w,
-              child: const ShadowComponent(
-                x: 4,
-                y: 2,
-              )),
-          Positioned(
-              bottom: 90.h,
-              right: -10.w,
-              child: const ShadowComponent(
-                y: 25,
-                x: 0,
-              )),
-          Positioned(
-              bottom: 2.h,
-              left: -8.w,
-              child: const ShadowComponent(
-                x: 1,
-                y: 1,
-              )),
+         const ScreenCornersShadowEffect(),
           SingleChildScrollView(
             reverse: true,
             child: Column(
               children: [
                 SizedBox(
-                  height: 42,
+                  height: 42.h,
                   width: MediaQuery.of(context).size.width,
                 ),
                 Image.asset(
@@ -69,8 +50,8 @@ class ReservationDestination extends StatelessWidget {
             onPressed: () {
                Get.find<ReservationLoationController>().skipEvent();
             },
-            top: -3,
-            left: 0,
+            top: -2,
+          
           )
         ],
       ),

@@ -6,21 +6,21 @@ import 'package:tyasart/controller/auth/login_continue_controller.dart';
 
 import '../../../../../config/themes/styles.dart';
 import '../../../../../core/constant/color.dart';
-import '../../../../../core/utilits/widgets/customSubmattiedbutton.dart';
+import '../../../../../core/utilits/widgets/custom_submattied_button.dart';
 import '../../../../../core/utilits/widgets/input_field_with_label.dart';
 
-class MainInformation extends StatelessWidget {
-  const MainInformation({super.key});
+class LoginContinueMainInformation extends StatelessWidget {
+  const LoginContinueMainInformation({super.key});
 
   @override
   Widget build(BuildContext context) {
     return      Form(
       child: Column(children: [
-                   const InputFieldWithLabel(hint: "أكتب هنا الاسم كاملا",label: "الاسم كاملا",),
-                  const InputFieldWithLabel(hint: "أكتب هنا البريد الالكتروني",label: "البريد الالكتروني",),
-                  const InputFieldWithLabel(hint: "أكتب هنا الرمز السري",label: "الرمز السري",),
-                  const InputFieldWithLabel(hint: "إعاده كتابة الرمز السري",label: "إعاده كتابة الرمز السري",),
-                  const SizedBox(height: 6,),
+                    const InputFieldWithLabel(hint: "أكتب هنا الاسم كاملا",label: "الاسم كاملا",paddingBottom: 0),
+                   const InputFieldWithLabel(hint: "أكتب هنا البريد الالكتروني",label: "البريد الالكتروني",paddingBottom: 0),
+                   const InputFieldWithLabel(hint: "أكتب هنا الرمز السري",label: "الرمز السري",paddingBottom: 0,),
+                   const InputFieldWithLabel(hint: "إعاده كتابة الرمز السري",label: "إعاده كتابة الرمز السري",paddingBottom: 0),
+                   SizedBox(height: 30.h,),
                    
             
                 

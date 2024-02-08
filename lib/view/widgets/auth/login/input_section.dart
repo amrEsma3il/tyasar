@@ -7,11 +7,11 @@ import 'package:tyasart/controller/auth/login_controller.dart';
 import '../../../../config/themes/styles.dart';
 import '../../../../core/constant/color.dart';
 import '../../../../core/constant/imgaeasset.dart';
-import '../../../../core/utilits/widgets/customSubmattiedbutton.dart';
+import '../../../../core/utilits/widgets/custom_submattied_button.dart';
 import '../../../../core/utilits/widgets/custom_text_field.dart';
 
-class InputSection extends StatelessWidget {
-  const InputSection({
+class LoginInputSection extends StatelessWidget {
+  const LoginInputSection({
     super.key,
   });
 
@@ -24,7 +24,7 @@ class InputSection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(right: 10),
+              padding:  EdgeInsets.only(right: 10.w),
               child: Text(
                 "أكتب رقم جوالك",
                 style: TextStyles.font16WhiteSemiBold.copyWith(color: Colors.black),
@@ -36,14 +36,14 @@ class InputSection extends StatelessWidget {
             Row(
               children: [
                 CustomTextField(
-                  paddingBottom: 16,
+                  paddingBottom: 16.h,
       
                   controller: LoginController.phoneNumber,
                    onTap: (){
                     
                    },
                     width: 230.w,
-                    height: 57.h,
+                    height: 56.h,
                     hintText: "01006539084",
                     
                     prefixWidget: Padding(
@@ -63,37 +63,33 @@ class InputSection extends StatelessWidget {
       
                     // Get.find<LoginController>().showOverlay(context);
                   },
-                  child: CompositedTransformTarget(
-                    link: Get.find<LoginController>().linkLayer!,
-      
-                    child: Container(
-                      padding: EdgeInsets.only(right: 5),
-                      
-                      width: 107.w,
-                      height: 56.h,
-                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),
-                      border: Border.all(width: 1.7,color:AppColor.softGray)),
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const SizedBox(width: 4,),
-                            // const Icon(Icons.flag_outlined,size: 30,),
-                            SvgPicture.asset(AppImageAsset.egypt),
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 5,right: 3),
-                              child: Text(
-                                '+20',
-                                style: TextStyles.font13GrayRegular
-                                    .copyWith(fontSize: 19),
-                              ),
+                  child: Container(
+                    padding: EdgeInsets.only(right: 5.w),
+                    
+                    width: 105.w,
+                    height: 56.h,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),
+                    border: Border.all(width: 1.7.w,color:AppColor.softGray)),
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                           SizedBox(width: 4.w,),
+                          // const Icon(Icons.flag_outlined,size: 30,),
+                          SvgPicture.asset(AppImageAsset.egypt),
+                          Padding(
+                            padding:  EdgeInsets.only(bottom: 5.w,right: 3.w),
+                            child: Text(
+                              '+20',
+                              style: TextStyles.font13GrayRegular
+                                  .copyWith(fontSize: 19),
                             ),
-                           const Icon(
-                                Icons.arrow_drop_down_rounded,
-                                size: 25,color: AppColor.iconsColor,
-                              ),
-                               const SizedBox(width: 8,),
-                          ]),
-                    ),
+                          ),
+                         const Icon(
+                              Icons.arrow_drop_down_rounded,
+                              size: 25,color: AppColor.iconsColor,
+                            ),
+                              SizedBox(width: 8.w,),
+                        ]),
                   ),
                 ),
                 ],

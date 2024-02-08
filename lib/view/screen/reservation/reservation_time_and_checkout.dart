@@ -1,90 +1,81 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+
 import 'package:tyasart/core/constant/color.dart';
+import '../../../core/constant/imgaeasset.dart';
+import '../../../core/utilits/widgets/custom_submattied_button.dart';
 
 import '../../../config/themes/styles.dart';
-import '../../../core/constant/imgaeasset.dart';
-import '../../widgets/auth/shadow_component.dart';
-import '../../widgets/auth/verify_code/arrow_back.dart';
-import '../../widgets/auth/verify_code/headline_and_info.dart';
-import '../../widgets/auth/verify_code/input_section.dart';
+
+import '../../../core/utilits/widgets/line_divider.dart';
+import '../../../core/utilits/widgets/screen_shadow_corner_effect.dart';
+
+import '../../widgets/reservation/reservation_time_and_checkout/reservation_checkout/reservasion_checkout_section.dart';
+import '../../widgets/reservation/reservation_time_and_checkout/reservation_time/reservation_time_and_day_section.dart';
+import '../../widgets/reservation/reservation_time_and_checkout/reservation_time_bottomsheet_component.dart';
+import '../../../core/utilits/widgets/screen_header.dart';
 
 class ReservationTime extends StatelessWidget {
   const ReservationTime({super.key});
 
   @override
   Widget build(BuildContext context) {
-   return Scaffold(body: SafeArea(
-        child: SizedBox(
-          height: MediaQuery.of(context).size.height,
-          child: Stack(
-            children: [
-              Positioned(
-                  top: 5.h,
-                  right: 5.w,
-                  child: const ShadowComponent(
-                    x: 4,
-                    y: 2,
-                  )),
-              Positioned(
-                  bottom: 90.h,
-                  right: -10.w,
-                  child: const ShadowComponent(
-                    y: 25,
-                    x: 0,
-                  )),
-              Positioned(
-                  bottom: 2.h,
-                  left: -8.w,
-                  child: const ShadowComponent(
-                    x: 1,
-                    y: 1,
-                  )),
-             
-             SingleChildScrollView(
-          reverse: true,
+    return Scaffold(
+      body: SafeArea(
+          child: SizedBox(
+        height: MediaQuery.of(context).size.height,
+        child: Stack(
+          children: [
+            const ScreenCornersShadowEffect(),
+            SingleChildScrollView(
+              reverse: true,
+              child: Padding(
+                padding: EdgeInsets.only(right: 12.w, left: 12.w),
                 child: Column(
-        
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                     SizedBox(height: 85.h,width: Get.width,),
-                     Container(width: Get.width,height: 1,color: AppColor.softGray,),
-                    // Image.asset(
-                    //   AppImageAsset.verifyCoed,
-                    //   height: 214.h,
-                    //   width: 214.w,
-                    // ),
-                 
+                     const ScreenHeader(icon: AppImageAsset.backArrow,title: "الوقت المناسب"),
                     SizedBox(
-                      height: 18.h,
+                      height: 40.h,
+                      width: Get.width,
                     ),
-                 
-                    //  KeyboardPadding(paddingContext: context),
+                    DividerLine(
+                      width: Get.width,
+                    ),
+                    const ReservationTimeSection(),
+                    const DividerLine(
+                        color: AppColor.lightShadeGreen, verticalmargin: 22.5),
+                    const ReservaionCheckoutSection(),
+                    CustomSubmattiedButton(
+                      colorButtom: AppColor.primaryColor,
+                      width: 343.w,
+                      height: 56.h,
+                      onPressed: () {
+                        showModalBottomSheet(
+                          context: context,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(48.r),
+                                  topLeft: Radius.circular(48.r))),
+                          builder: (context) =>
+                              const ReservationBottomSheetComponent(),
+                        );
+                      },
+                      textWidget: Text(
+                        "إحجز الان",
+                        style: TextStyles.font16WhiteSemiBold,
+                      ),
+                    ),
+                    SizedBox(height: 10.h)
                   ],
                 ),
               ),
-                 Positioned(
-        right: 23.h,
-        top: 22.w,
-        child: Row(
-          children: [
-            InkWell(
-                onTap: () {
-               
-                },
-                child: SvgPicture.asset(AppImageAsset.backArrow)),
-                SizedBox(width: 80.w,),
-                   Text("الوقت المناسب",
-              style: TextStyles.font22Black400Weight.copyWith(
-                height: 0.7,
-                  letterSpacing: -2, fontSize: 26.sp, fontWeight: FontWeight.w700),
-              textAlign: TextAlign.center)
+            ),
+           
           ],
-        )),
-            ],
-          ),
-        ))
-  ,);
+        ),
+      )),
+    );
   }
 }
