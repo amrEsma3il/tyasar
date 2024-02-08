@@ -6,11 +6,11 @@ import 'package:get/get.dart';
 import '../../../../config/themes/styles.dart';
 import '../../../../controller/auth/verfiy_code_controller.dart';
 import '../../../../core/constant/color.dart';
-import '../../../../core/utilits/widgets/customSubmattiedbutton.dart';
+import '../../../../core/utilits/widgets/custom_submattied_button.dart';
 import 'verfiy_code_digit.dart';
 
-class InputSection extends StatelessWidget {
-  const InputSection({
+class VerifyInputSection extends StatelessWidget {
+  const VerifyInputSection({
     super.key,
   });
 

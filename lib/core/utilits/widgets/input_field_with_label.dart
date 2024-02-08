@@ -3,7 +3,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:get/get.dart';
+import 'package:tyasart/controller/auth/login_continue_controller.dart';
 import '../../../config/themes/styles.dart';
 import 'custom_text_field.dart';
 
@@ -15,7 +16,7 @@ final int? maxLines;
  final double? paddingBottom;
    const InputFieldWithLabel({
     this.maxLines=1,
-    super.key, required this.label, required this.hint,  this.height=46,this.width=343, this.prefix ,this.suffix, this.paddingBottom=5
+    super.key, required this.label, required this.hint,  this.height=46,this.width=343, this.prefix ,this.suffix, this.paddingBottom=9
   });
 
   @override
@@ -27,11 +28,15 @@ final int? maxLines;
          label,
           style: TextStyles.font16WhiteSemiBold.copyWith(color: Colors.black),
         ),
-        const SizedBox(
-          height: 4,
-        ),
+         GetBuilder<LoginContinueController>(
+           builder: (controller) {
+             return SizedBox(
+              height: 4.h,
+                     );
+           }
+         ),
         Padding(
-          padding: const EdgeInsets.only(bottom: 11),
+          padding:  EdgeInsets.only(bottom: 13.h),
           child: CustomTextField(
             prefixWidget: prefix,
             paddingBottom: paddingBottom,

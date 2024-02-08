@@ -12,8 +12,12 @@ class AppImageAsset {
   static const String egypt = "$rootImages/egypt.svg";
   static const String verifyCoed = "$rootImages/verify_code.png";
 
-  static const String backArrow = "$rootImages/Back.svg";
+  static const String backArrow = "assets/imgs/Back.svg";
   static const String reservationLocation = "$rootImages/reservation_location.png";
 
   static const String reservationCheck = "$rootImages/reservation_check.png";
+
+  static const String bank = "$rootImages/bank.png";
+  static const String visa = "$rootImages/visa.png";
+  static const String prePaid = "$rootImages/prepaid.png";
 }

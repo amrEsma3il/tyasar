@@ -5,8 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/constant/color.dart';
 
-class StipperSubInfo extends StatelessWidget {
-  const StipperSubInfo({
+class LoginContinueStipperSubInfo extends StatelessWidget {
+  const LoginContinueStipperSubInfo({
     super.key,
   });
 

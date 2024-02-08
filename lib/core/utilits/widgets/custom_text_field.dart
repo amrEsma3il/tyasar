@@ -53,6 +53,7 @@ class CustomTextField extends StatelessWidget {
         border: Border.all(width:1,color: AppColor.softGray)),
       
       child: TextFormField(
+        
         maxLines: maxLines!,
         controller: controller
         ,

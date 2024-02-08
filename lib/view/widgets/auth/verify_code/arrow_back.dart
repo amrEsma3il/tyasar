@@ -7,8 +7,8 @@ import 'package:get/get.dart';
 import '../../../../controller/auth/verfiy_code_controller.dart';
 import '../../../../core/constant/imgaeasset.dart';
 
-class ArrowBack extends StatelessWidget {
-  const ArrowBack({
+class VerifyArrowBack extends StatelessWidget {
+  const VerifyArrowBack({
     super.key,
   });
 

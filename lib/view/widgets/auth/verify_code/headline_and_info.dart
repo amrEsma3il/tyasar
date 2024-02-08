@@ -13,7 +13,7 @@ class HeadlineAndInfoSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 14.w, top: 4),
+      padding: EdgeInsets.only(left: 14.w, top: 4.h),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

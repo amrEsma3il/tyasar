@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../config/themes/styles.dart';
 
-class StipperHeadline extends StatelessWidget {
-  const StipperHeadline({
+class LoginContinueStipperHeadline extends StatelessWidget {
+  const LoginContinueStipperHeadline({
     super.key,
   });
 

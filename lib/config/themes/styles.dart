@@ -55,5 +55,13 @@ class TextStyles {
     decoration: TextDecoration. underline
   );
 
+  
+    static TextStyle font12bluishGray500= TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color:AppColor.bluishGray,
+ 
+  );
+
 
 }
