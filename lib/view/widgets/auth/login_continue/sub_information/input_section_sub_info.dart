@@ -8,6 +8,7 @@ import '../../../../../controller/auth/login_continue_controller.dart';
 import '../../../../../core/constant/color.dart';
 import '../../../../../core/constant/imgaeasset.dart';
 import '../../../../../core/utilits/widgets/custom_submattied_button.dart';
+import '../../../../../core/utilits/widgets/custom_text_field.dart';
 import '../../../../../core/utilits/widgets/input_field_with_label.dart';
 
 class LoginContinueSubInformation extends StatelessWidget {
@@ -108,24 +109,24 @@ class LoginContinueSubInformation extends StatelessWidget {
                 hint: "* * * * * * * *012",
                 label: "رقم جوال أحد الاقارب",
                 width: 230),
-            GestureDetector(
-              onTap: () {},
-              child: Container(
-                margin: const EdgeInsets.only(top: 22),
-                width: 107.w,
+            Padding(
+              padding: EdgeInsets.only(top: 18.h),
+              child: CustomTextField(
+                controller: TextEditingController(),
+                paddingBottom: 30.h,
                 height: 46.h,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    border: Border.all(width: 1.7, color: AppColor.softGray)),
-                child: Row(
+                width: 105.w,
+                onTap: () {},
+                hintText: '20+',
+                prefixWidget: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const SizedBox(
-                        width: 4,
+                      SizedBox(
+                        width: 11.w,
                       ),
                       SvgPicture.asset(AppImageAsset.egypt),
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 5, right: 3),
+                        padding: EdgeInsets.only(bottom: 5.w, right: 3.w),
                         child: Text(
                           '+20',
                           style: TextStyles.font13GrayRegular
@@ -137,12 +138,12 @@ class LoginContinueSubInformation extends StatelessWidget {
                         size: 25,
                         color: AppColor.iconsColor,
                       ),
-                      const SizedBox(
-                        width: 8,
+                      SizedBox(
+                        width: 5.w,
                       ),
                     ]),
               ),
-            ),
+            )
           ]),
           InputFieldWithLabel(
               height: 81.h,
@@ -160,7 +161,9 @@ class LoginContinueSubInformation extends StatelessWidget {
               style: TextStyles.font16WhiteSemiBold,
             ),
           ),
-          SizedBox(height: 10.h,)
+          SizedBox(
+            height: 10.h,
+          )
         ],
       ),
     );

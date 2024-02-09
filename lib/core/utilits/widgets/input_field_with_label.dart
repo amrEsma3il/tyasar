@@ -3,8 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:tyasart/controller/auth/login_continue_controller.dart';
+
 import '../../../config/themes/styles.dart';
 import 'custom_text_field.dart';
 
@@ -28,13 +27,9 @@ final int? maxLines;
          label,
           style: TextStyles.font16WhiteSemiBold.copyWith(color: Colors.black),
         ),
-         GetBuilder<LoginContinueController>(
-           builder: (controller) {
-             return SizedBox(
-              height: 4.h,
-                     );
-           }
-         ),
+         SizedBox(
+          height: 4.h,
+                 ),
         Padding(
           padding:  EdgeInsets.only(bottom: 13.h),
           child: CustomTextField(
