@@ -11,7 +11,8 @@ class CheckoutDetailsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Column(
       children: [
-       ...List.generate(rservationCeckoutDetailsList.length, (index) =>  CeckoutComponent(reservationPaymentMethodEntity: rservationCeckoutDetailsList[index]),)
+       ...List.generate(rservationCeckoutDetailsList.length, (index) =>  CeckoutComponent(
+        reservationCheckoutEntity: rservationCeckoutDetailsList[index]),)
      
       ],
     );

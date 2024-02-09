@@ -6,6 +6,8 @@ import 'controller/auth/login_continue_controller.dart';
 import 'controller/auth/login_controller.dart';
 import 'controller/onboarding/onboarding_controller.dart';
 import 'controller/reservation/reservation_location_controller.dart';
+import 'controller/reservation/reservation_time_controller.dart';
+
 
 
 
@@ -20,6 +22,7 @@ class AppBindings extends Bindings{
      Get.lazyPut(() => VerifyController(),fenix:true );
      Get.lazyPut(() => LoginContinueController(),fenix:true );
       Get.lazyPut(() => ReservationLoationController(),fenix:true ); 
+        Get.lazyPut(() => ReservationTimeController(),fenix:true ); 
 
 
     //resources

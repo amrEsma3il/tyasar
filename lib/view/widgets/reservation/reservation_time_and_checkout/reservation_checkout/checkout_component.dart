@@ -2,36 +2,37 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../config/themes/styles.dart';
+import '../../../../../core/constant/color.dart';
 import '../../../../../core/utilits/widgets/line_divider.dart';
 import '../../../../../data/datasource/static/reservation/reservation_checkout_detail_data_source.dart';
 
 class CeckoutComponent extends StatelessWidget {
-  final Map<String, String>? reservationPaymentMethodEntity;
+  final Map<String, String>? reservationCheckoutEntity;
  
   const CeckoutComponent({
-    super.key,  this.reservationPaymentMethodEntity,
+    super.key,  this.reservationCheckoutEntity,
   });
 
 
   @override
   Widget build(BuildContext context) {
-    int paddingHeight=(rservationCeckoutDetailsList[2]['title']== reservationPaymentMethodEntity!['title']!)?22:12;
+    bool paddingHeight=(rservationCeckoutDetailsList[2]['title']== reservationCheckoutEntity!['title']!);
     return Padding(
-      padding:  EdgeInsets.only(bottom:paddingHeight.h),
+      padding:  EdgeInsets.only(bottom:paddingHeight?0:12.h),
       child: Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-               reservationPaymentMethodEntity!['title']!,
+               reservationCheckoutEntity!['title']!,
                 style: TextStyles.font22Black400Weight.copyWith(
                     height: 1.2, fontSize: 15.sp, fontWeight: FontWeight.w400),
               ),
               Row(
                 children: [
                   Text(
-                   reservationPaymentMethodEntity!['cost']!,
+                   reservationCheckoutEntity!['cost']!,
                     style:
                         TextStyles.font22Black400Weight.copyWith(fontSize: 14.sp),
                   ),
@@ -45,9 +46,9 @@ class CeckoutComponent extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height:8.h,
+            height:paddingHeight?32:8.h,
           ),
-         const DividerLine()
+          DividerLine(color: paddingHeight?AppColor.lightShadeGreen:AppColor.softGray,)
         ],
       ),
     );

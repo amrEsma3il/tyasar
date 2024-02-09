@@ -2,6 +2,7 @@
 import 'package:get/get.dart';
 
 
+import '../../view/screen/reservation/companion_track.dart';
 import '../../view/screen/reservation/reservation_time_and_checkout.dart';
 import '../../view/screen/reservation/reservayion_destination.dart';
 import '../../view/screen/auth/login.dart';
@@ -39,6 +40,11 @@ List<GetPage<dynamic>>? routes = [
           GetPage(
       page: () => const ReservationTime(),
       name: AppRouteName.reservationTime,
+      transition: Transition.fadeIn,
+      transitionDuration: const Duration(milliseconds: 350)),
+               GetPage(
+      page: () => const CompanionTrack(),
+      name: AppRouteName.companionTrack,
       transition: Transition.fadeIn,
       transitionDuration: const Duration(milliseconds: 350)),
 ];

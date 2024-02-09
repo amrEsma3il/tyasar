@@ -19,7 +19,7 @@ class ScreenHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.only(top: 18.h,right: 12.w),
+      padding:  EdgeInsets.only(top: 20.h,right: 12.w),
       child: Row(
         children: [
           InkWell(
