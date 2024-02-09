@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import '../../../../../config/themes/styles.dart';
+import '../../../../../controller/reservation/reservation_time_controller.dart';
 import '../../../../../data/datasource/static/reservation/reservation_payment_method_data_source.dart';
 import 'payment_method_component.dart';
 
@@ -31,6 +33,11 @@ class PaymentMethodSection extends StatelessWidget {
             ...List.generate(
                 paymentMethodList.length,
                 (index) => PaymentMethodComponent(
+                  onTap: () {
+                                        Get.find<ReservationTimeController>().selecPaymentMethod(index);
+                  },
+                  
+                  index: index,
                       paymentMethodIcon: paymentMethodList[index],
                     ))
           ],

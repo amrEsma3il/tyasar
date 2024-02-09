@@ -5,6 +5,7 @@ import '../../config/routing/app_routes_name.dart';
 
 class ReservationLoationController extends GetxController {
   late PageController pageController;
+  
 
   
 
@@ -13,6 +14,9 @@ class ReservationLoationController extends GetxController {
 
   }
 
+skipEvent() {
+    Get.toNamed(AppRouteName.reservationTime);
+  }
 
 
   @override
@@ -21,7 +25,11 @@ class ReservationLoationController extends GetxController {
     super.onInit();
   }
 
-  skipEvent() {
-    Get.toNamed(AppRouteName.reservationTime);
+  
+
+  @override
+  void dispose() {
+   pageController.dispose();
+    super.dispose();
   }
 }

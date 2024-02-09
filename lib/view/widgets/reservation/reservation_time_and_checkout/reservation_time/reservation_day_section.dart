@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:tyasart/controller/reservation/reservation_time_controller.dart';
 
 import '../../../../../config/themes/styles.dart';
 import '../../../../../data/datasource/static/reservation/reservation_day_data_source.dart';
@@ -54,6 +56,12 @@ class SuitableDay extends StatelessWidget {
             ...List.generate(
                 rservationDayList.length,
                 (index) => ReservationDayComponent(
+                  
+                  onTap: () {
+                    Get.find<ReservationTimeController>().selectDay(index);
+                  },
+                  
+                  index: index,
                       reservationDayEntity: rservationDayList[index],
                     )),
           ],

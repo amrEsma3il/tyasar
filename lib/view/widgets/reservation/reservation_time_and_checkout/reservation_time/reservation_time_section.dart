@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../../../../../config/themes/styles.dart';
+import '../../../../../controller/reservation/reservation_time_controller.dart';
 import '../../../../../data/datasource/static/reservation/reservation_time_data_source.dart';
 import 'reservation_time_component.dart';
 
@@ -42,9 +44,18 @@ class SuitableTime extends StatelessWidget {
           children: [
             ...List.generate(
                 reservationTimeList.length ~/ 2,
-                (index) => ReservationTimeComponent(
-                      reservationTime: reservationTimeList[index],
-                    )),
+                (index) => GetBuilder<ReservationTimeController>(
+                        builder: (controller) {
+                      return ReservationTimeComponent(
+                        selectTime: controller.timeFromIndex == index,
+                        onTap: () {
+                          Get.find<ReservationTimeController>()
+                              .selectTimeFrom(index);
+                        },
+                        index: index,
+                        reservationTime: reservationTimeList[index],
+                      );
+                    })),
           ],
         ),
         SizedBox(
@@ -66,9 +77,18 @@ class SuitableTime extends StatelessWidget {
           children: [
             ...List.generate(
                 reservationTimeList.length ~/ 2,
-                (index) => ReservationTimeComponent(
-                    reservationTime: reservationTimeList[
-                        (reservationTimeList.length - 1) - index]))
+                (index) => GetBuilder<ReservationTimeController>(
+                        builder: (controller) {
+                      return ReservationTimeComponent(
+                          selectTime: controller.timeToIndex == index,
+                          onTap: () {
+                            Get.find<ReservationTimeController>()
+                                .selectTimeTo(index);
+                          },
+                          index: index,
+                          reservationTime: reservationTimeList[
+                              (reservationTimeList.length - 1) - index]);
+                    }))
           ],
         ),
       ],
