@@ -21,6 +21,7 @@ class LoginContinueSubInformation extends StatelessWidget {
         children: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             InputFieldWithLabel(
+              paddingTop: 13.5,
                 suffix: Padding(
                   padding: const EdgeInsets.only(left: 35),
                   child: InkWell(
@@ -32,6 +33,7 @@ class LoginContinueSubInformation extends StatelessWidget {
                 label: "الجنس",
                 width: 163),
             InputFieldWithLabel(
+              paddingTop: 12.5,
               hint: "23-4-1994",
               label: "تاريخ الميلاد",
               width: 163,
@@ -54,6 +56,7 @@ class LoginContinueSubInformation extends StatelessWidget {
             ),
           ]),
           InputFieldWithLabel(
+            paddingTop: 11,
             suffix: Padding(
               padding: const EdgeInsets.only(left: 35),
               child: InkWell(
@@ -65,6 +68,7 @@ class LoginContinueSubInformation extends StatelessWidget {
           ),
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             InputFieldWithLabel(
+              paddingTop: 12,
               hint: "70",
               label: "وزن الجسم",
               width: 163,
@@ -77,7 +81,7 @@ class LoginContinueSubInformation extends StatelessWidget {
               ),
             ),
             InputFieldWithLabel(
-              paddingBottom: 7.6,
+              paddingTop: 14,
               hint: "سمعية",
               label: "نوع الاعاقة",
               width: 163,
@@ -93,7 +97,7 @@ class LoginContinueSubInformation extends StatelessWidget {
             ),
           ]),
           InputFieldWithLabel(
-            paddingBottom: 6,
+            paddingTop: 14,
             suffix: Padding(
               padding: const EdgeInsets.only(left: 35),
               child: InkWell(
@@ -105,15 +109,16 @@ class LoginContinueSubInformation extends StatelessWidget {
           ),
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             const InputFieldWithLabel(
-                paddingBottom: 0,
+                paddingTop: 11,
                 hint: "* * * * * * * *012",
                 label: "رقم جوال أحد الاقارب",
                 width: 230),
             Padding(
-              padding: EdgeInsets.only(top: 18.h),
+              padding: EdgeInsets.only(top: 18.5.h),
               child: CustomTextField(
                 controller: TextEditingController(),
                 paddingBottom: 30.h,
+                
                 height: 46.h,
                 width: 105.w,
                 onTap: () {},
@@ -146,6 +151,7 @@ class LoginContinueSubInformation extends StatelessWidget {
             )
           ]),
           InputFieldWithLabel(
+            paddingTop: 15,
               height: 81.h,
               hint: "ماذا تحتاج من المرافق",
               label: "ماذا تحتاج من المرافق"),
