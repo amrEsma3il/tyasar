@@ -8,6 +8,7 @@ import '../../../../../controller/auth/login_continue_controller.dart';
 import '../../../../../core/constant/color.dart';
 import '../../../../../core/constant/imgaeasset.dart';
 import '../../../../../core/utilits/widgets/custom_submattied_button.dart';
+import '../../../../../core/utilits/widgets/custom_text_field.dart';
 import '../../../../../core/utilits/widgets/input_field_with_label.dart';
 
 class LoginContinueSubInformation extends StatelessWidget {
@@ -20,6 +21,7 @@ class LoginContinueSubInformation extends StatelessWidget {
         children: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             InputFieldWithLabel(
+              paddingTop: 13.5,
                 suffix: Padding(
                   padding: const EdgeInsets.only(left: 35),
                   child: InkWell(
@@ -31,6 +33,7 @@ class LoginContinueSubInformation extends StatelessWidget {
                 label: "الجنس",
                 width: 163),
             InputFieldWithLabel(
+              paddingTop: 12.5,
               hint: "23-4-1994",
               label: "تاريخ الميلاد",
               width: 163,
@@ -53,6 +56,7 @@ class LoginContinueSubInformation extends StatelessWidget {
             ),
           ]),
           InputFieldWithLabel(
+            paddingTop: 11,
             suffix: Padding(
               padding: const EdgeInsets.only(left: 35),
               child: InkWell(
@@ -64,6 +68,7 @@ class LoginContinueSubInformation extends StatelessWidget {
           ),
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             InputFieldWithLabel(
+              paddingTop: 12,
               hint: "70",
               label: "وزن الجسم",
               width: 163,
@@ -76,7 +81,7 @@ class LoginContinueSubInformation extends StatelessWidget {
               ),
             ),
             InputFieldWithLabel(
-              paddingBottom: 7.6,
+              paddingTop: 14,
               hint: "سمعية",
               label: "نوع الاعاقة",
               width: 163,
@@ -92,7 +97,7 @@ class LoginContinueSubInformation extends StatelessWidget {
             ),
           ]),
           InputFieldWithLabel(
-            paddingBottom: 6,
+            paddingTop: 14,
             suffix: Padding(
               padding: const EdgeInsets.only(left: 35),
               child: InkWell(
@@ -104,28 +109,29 @@ class LoginContinueSubInformation extends StatelessWidget {
           ),
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             const InputFieldWithLabel(
-                paddingBottom: 0,
+                paddingTop: 11,
                 hint: "* * * * * * * *012",
                 label: "رقم جوال أحد الاقارب",
                 width: 230),
-            GestureDetector(
-              onTap: () {},
-              child: Container(
-                margin: const EdgeInsets.only(top: 22),
-                width: 107.w,
+            Padding(
+              padding: EdgeInsets.only(top: 18.5.h),
+              child: CustomTextField(
+                controller: TextEditingController(),
+                paddingBottom: 30.h,
+                
                 height: 46.h,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    border: Border.all(width: 1.7, color: AppColor.softGray)),
-                child: Row(
+                width: 105.w,
+                onTap: () {},
+                hintText: '20+',
+                prefixWidget: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const SizedBox(
-                        width: 4,
+                      SizedBox(
+                        width: 11.w,
                       ),
                       SvgPicture.asset(AppImageAsset.egypt),
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 5, right: 3),
+                        padding: EdgeInsets.only(bottom: 5.w, right: 3.w),
                         child: Text(
                           '+20',
                           style: TextStyles.font13GrayRegular
@@ -137,14 +143,15 @@ class LoginContinueSubInformation extends StatelessWidget {
                         size: 25,
                         color: AppColor.iconsColor,
                       ),
-                      const SizedBox(
-                        width: 8,
+                      SizedBox(
+                        width: 5.w,
                       ),
                     ]),
               ),
-            ),
+            )
           ]),
           InputFieldWithLabel(
+            paddingTop: 15,
               height: 81.h,
               hint: "ماذا تحتاج من المرافق",
               label: "ماذا تحتاج من المرافق"),
@@ -160,7 +167,9 @@ class LoginContinueSubInformation extends StatelessWidget {
               style: TextStyles.font16WhiteSemiBold,
             ),
           ),
-          SizedBox(height: 10.h,)
+          SizedBox(
+            height: 10.h,
+          )
         ],
       ),
     );

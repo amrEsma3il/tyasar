@@ -16,10 +16,10 @@ class LoginContinueMainInformation extends StatelessWidget {
   Widget build(BuildContext context) {
     return      Form(
       child: Column(children: [
-                    const InputFieldWithLabel(hint: "أكتب هنا الاسم كاملا",label: "الاسم كاملا",paddingBottom: 0),
-                   const InputFieldWithLabel(hint: "أكتب هنا البريد الالكتروني",label: "البريد الالكتروني",paddingBottom: 0),
-                   const InputFieldWithLabel(hint: "أكتب هنا الرمز السري",label: "الرمز السري",paddingBottom: 0,),
-                   const InputFieldWithLabel(hint: "إعاده كتابة الرمز السري",label: "إعاده كتابة الرمز السري",paddingBottom: 0),
+                    const InputFieldWithLabel(hint: "أكتب هنا الاسم كاملا",label: "الاسم كاملا",paddingTop: 11),
+                   const InputFieldWithLabel(hint: "أكتب هنا البريد الالكتروني",label: "البريد الالكتروني",paddingTop:11 ),
+                   const InputFieldWithLabel(hint: "أكتب هنا الرمز السري",label: "الرمز السري",paddingTop: 11,),
+                   const InputFieldWithLabel(hint: "إعاده كتابة الرمز السري",label: "إعاده كتابة الرمز السري",paddingTop: 11),
                    SizedBox(height: 30.h,),
                    
             

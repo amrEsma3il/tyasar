@@ -19,7 +19,7 @@ FocusNode textFieldFocus=FocusNode();
 nextEvent(){
 
 
-  Get.toNamed(AppRouteName.loginContinue);
+  Get.toNamed(AppRouteName.verifyCode);
 }
 
 
