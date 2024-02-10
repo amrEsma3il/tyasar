@@ -46,7 +46,7 @@ List<GetPage<dynamic>>? routes = [
       page: () => const CompanionTrack(),
       name: AppRouteName.companionTrack,
       transition: Transition.fadeIn,
-      transitionDuration: const Duration(milliseconds: 350)),
+      transitionDuration: const Duration(milliseconds: 450)),
 ];
 
 //LoginContinue

@@ -4,9 +4,6 @@ import 'package:get/get.dart';
 import '../../config/routing/app_routes_name.dart';
 
 class LoginContinueController extends GetxController {
-  LayerLink? linkLayer;
-  OverlayEntry? entry;
-
   static TextEditingController name = TextEditingController();
   static TextEditingController email = TextEditingController();
   static TextEditingController password = TextEditingController();
@@ -19,27 +16,33 @@ class LoginContinueController extends GetxController {
   static TextEditingController accompanying = TextEditingController();
   static TextEditingController relative = TextEditingController();
   static TextEditingController whatNeed = TextEditingController();
+  static ScrollController continueLogincrollController = ScrollController();
 
   FocusNode textFieldFocus = FocusNode();
 
   bool informationPageSelector = true;
 
   nextEvent() {
-   
-
     if (informationPageSelector) {
-      informationPageSelector=false;
-    
+      informationPageSelector = false;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        continueLogincrollController.animateTo(
+            continueLogincrollController.position.maxScrollExtent - 42,
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeIn);
+        update();
+      });
+      update();
+    } else {
+      Get.toNamed(AppRouteName.reservationDestination);
     }
-    else{  Get.toNamed(AppRouteName.reservationDestination);}
 
     update();
   }
 
   @override
   void onInit() {
-    linkLayer = LayerLink();
-    linkLayer = LayerLink();
+//
     super.onInit();
   }
 }

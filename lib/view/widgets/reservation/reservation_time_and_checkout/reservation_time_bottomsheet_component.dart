@@ -15,56 +15,73 @@ class ReservationBottomSheetComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: Get.width,
-      height: 342.h,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(48.r),
-              topRight: Radius.circular(48.r))),
-      child: Column(
-        children: [
-          SizedBox(
-            height: 25.h,
-          ),
-          Image.asset(
-            AppImageAsset.reservationCheck,
-            width: 137.w,
-            height: 140.h,
-          ),
-          SizedBox(
-            height: 15.h,
-          ),
-          Text(
-            "تم الحجز بنجاح",
-            style: TextStyles.font22Black400Weight,
-          ),
-          SizedBox(
-            height: 5.h,
-          ),
-          Text(
-            "يتم البحث عم المرافق المناسب سيستغرق البحث ثواني معدودة",
-            style: TextStyles.font22Black400Weight
-                .copyWith(fontSize: 14.sp, color: AppColor.gray),
-          ),
-          SizedBox(
-            height: 22.h,
-          ),
-          CustomSubmattiedButton(
-            colorButtom: AppColor.primaryColor,
-            width: 343.w,
-            height: 56.h,
-            onPressed: () {
-
-         Get.find<ReservationTimeController>().reservationEvent();
-            },
-            textWidget: Text(
-              "تتبع المرافق",
-              style: TextStyles.font16WhiteSemiBold,
-            ),
-          )
-        ],
-      ),
+    return GetBuilder<ReservationTimeController>(
+      builder: (controller) {
+        return AnimatedBuilder(
+          animation: controller.animationController,
+          builder: (BuildContext context, Widget? child) {
+            return SingleChildScrollView(
+              child: Container(
+                
+               
+                width: Get.width,
+                height:342.h,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(48.r),
+                        topRight: Radius.circular(48.r))),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height:controller.animation.value* 25.h,
+                    ),
+                    Image.asset(
+                      AppImageAsset.reservationCheck,
+                      width: 137.w,
+                      height:controller.animation.value* 140.h,
+                    ),
+                    SizedBox(
+                      height:controller.animation.value* 15.h,
+                    ),
+                    SizedBox(height: controller.animation.value*34.h,
+                      child: Text(
+                        "تم الحجز بنجاح",
+                        style: TextStyles.font22Black400Weight,
+                      ),
+                    ),
+                    SizedBox(
+                      height:controller.animation.value* 5.h,
+                    ),
+                    SizedBox(height: controller.animation.value*25.h,
+                      child: Text(
+                        "يتم البحث عم المرافق المناسب سيستغرق البحث ثواني معدودة",
+                        style: TextStyles.font22Black400Weight
+                            .copyWith(fontSize: 14.sp, color: AppColor.gray),
+                      ),
+                    ),
+                    SizedBox(
+                      height:controller.animation.value* 22.h,
+                    ),
+                    CustomSubmattiedButton(
+                      colorButtom: AppColor.primaryColor,
+                      width: 343.w,
+                      height:controller.animation.value* 56.h,
+                      onPressed: () {
+              
+                   Get.find<ReservationTimeController>().followEvent();
+                      },
+                      textWidget: Text(
+                        "تتبع المرافق",
+                        style: TextStyles.font16WhiteSemiBold,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            );
+          }
+        );
+      }
     );
   }
 }

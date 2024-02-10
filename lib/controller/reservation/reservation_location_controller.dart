@@ -15,6 +15,8 @@ class ReservationLoationController extends GetxController {
   }
 
 skipEvent() {
+ 
+
     Get.toNamed(AppRouteName.reservationTime);
   }
 
