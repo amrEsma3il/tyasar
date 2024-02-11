@@ -26,7 +26,10 @@ class ReservaionCheckoutSection extends StatelessWidget {
             suffiWidget: Padding(
                 padding: const EdgeInsets.only(left: 4.5, top: 5),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+ 
+
+                  },
                   child: Container(
                     width: 100.01.w,
                     height: 44.13.h,

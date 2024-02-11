@@ -28,6 +28,7 @@ class LoginContinue extends StatelessWidget {
           children: [
             const ScreenCornersShadowEffect(),
             SingleChildScrollView(
+              controller: LoginContinueController.continueLogincrollController,
               reverse: true,
               child: GetBuilder<LoginContinueController>(
                   builder: (loginContinueController) {

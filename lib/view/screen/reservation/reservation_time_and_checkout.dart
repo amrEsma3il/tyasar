@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'package:tyasart/core/constant/color.dart';
+import '../../../controller/reservation/reservation_time_controller.dart';
 import '../../../core/constant/imgaeasset.dart';
 import '../../../core/utilits/widgets/custom_submattied_button.dart';
 
@@ -13,7 +14,6 @@ import '../../../core/utilits/widgets/screen_shadow_corner_effect.dart';
 
 import '../../widgets/reservation/reservation_time_and_checkout/reservation_checkout/reservasion_checkout_section.dart';
 import '../../widgets/reservation/reservation_time_and_checkout/reservation_time/reservation_time_and_day_section.dart';
-import '../../widgets/reservation/reservation_time_and_checkout/reservation_time_bottomsheet_component.dart';
 import '../../../core/utilits/widgets/screen_header.dart';
 
 class ReservationTime extends StatelessWidget {
@@ -29,13 +29,16 @@ class ReservationTime extends StatelessWidget {
           children: [
             const ScreenCornersShadowEffect(),
             SingleChildScrollView(
+              controller:
+                  ReservationTimeController.reservationTimeScrollController,
               reverse: true,
               child: Padding(
                 padding: EdgeInsets.only(right: 12.w, left: 12.w),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                     const ScreenHeader(icon: AppImageAsset.backArrow,title: "الوقت المناسب"),
+                    const ScreenHeader(
+                        icon: AppImageAsset.backArrow, title: "الوقت المناسب"),
                     SizedBox(
                       height: 40.h,
                       width: Get.width,
@@ -52,15 +55,7 @@ class ReservationTime extends StatelessWidget {
                       width: 343.w,
                       height: 56.h,
                       onPressed: () {
-                        showModalBottomSheet(
-                          context: context,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(48.r),
-                                  topLeft: Radius.circular(48.r))),
-                          builder: (context) =>
-                              const ReservationBottomSheetComponent(),
-                        );
+                        Get.find<ReservationTimeController>().reservationEvent(context);
                       },
                       textWidget: Text(
                         "إحجز الان",
@@ -72,7 +67,6 @@ class ReservationTime extends StatelessWidget {
                 ),
               ),
             ),
-           
           ],
         ),
       )),
