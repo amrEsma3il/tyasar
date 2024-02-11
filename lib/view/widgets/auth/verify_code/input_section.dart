@@ -25,19 +25,19 @@ class VerifyInputSection extends StatelessWidget {
               VerifyCodeDigit(
                   first: true,
                   last: false,
-                  controller: VerifyController.firstDigit),
+                  controller: Get.find<VerifyController>().firstDigit),
               VerifyCodeDigit(
                   first: false,
                   last: false,
-                  controller: VerifyController.secondtDigit),
+                  controller:  Get.find<VerifyController>().secondtDigit),
               VerifyCodeDigit(
                   first: false,
                   last: false,
-                  controller: VerifyController.thirdDigit),
+                  controller:  Get.find<VerifyController>().thirdDigit),
               VerifyCodeDigit(
                   first: false,
                   last: true,
-                  controller: VerifyController.fourthDigit),
+                  controller:  Get.find<VerifyController>().fourthDigit),
             ],
           ),
           SizedBox(

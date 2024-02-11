@@ -30,7 +30,7 @@ class ReservationTime extends StatelessWidget {
             const ScreenCornersShadowEffect(),
             SingleChildScrollView(
               controller:
-                  ReservationTimeController.reservationTimeScrollController,
+                  Get.find<ReservationTimeController>().reservationTimeScrollController,
               reverse: true,
               child: Padding(
                 padding: EdgeInsets.only(right: 12.w, left: 12.w),

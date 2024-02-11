@@ -1,7 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import '../../../../../config/themes/styles.dart';
+import '../../../../../controller/reservation/reservation_time_controller.dart';
 import '../../../../../core/constant/color.dart';
 import '../../../../../core/utilits/widgets/custom_text_field.dart';
 import 'checkout_detail_section.dart';
@@ -18,7 +20,7 @@ class ReservaionCheckoutSection extends StatelessWidget {
       children: [
         CustomTextField(
             paddingBottom: 12,
-            controller: TextEditingController(),
+            controller:Get.find<ReservationTimeController>().cupon ,
             onTap: () {},
             width: 343.w,
             height: 56.h,

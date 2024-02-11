@@ -37,7 +37,7 @@ class LoginInputSection extends StatelessWidget {
               children: [
                 CustomTextField(
                     paddingBottom: 16.h,
-                    controller: LoginController.phoneNumber,
+                    controller: Get.find<LoginController>().phoneNumber,
                     onTap: () {},
                     width: 230.w,
                     height: 56.h,
@@ -53,7 +53,7 @@ class LoginInputSection extends StatelessWidget {
                   width: 7.w,
                 ),
                 CustomTextField(
-                  controller: TextEditingController(),
+                  controller: Get.find<LoginController>().countryCode,
                   paddingBottom: 30.h,
                   height: 56.h,
                   width: 105.w,

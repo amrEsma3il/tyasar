@@ -21,6 +21,7 @@ class LoginContinueSubInformation extends StatelessWidget {
         children: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             InputFieldWithLabel(
+              controller: Get.find<LoginContinueController>().gender,
               paddingTop: 13.5,
                 suffix: Padding(
                   padding: const EdgeInsets.only(left: 35),
@@ -33,6 +34,7 @@ class LoginContinueSubInformation extends StatelessWidget {
                 label: "الجنس",
                 width: 163),
             InputFieldWithLabel(
+              controller: Get.find<LoginContinueController>().birthDate,
               paddingTop: 12.5,
               hint: "23-4-1994",
               label: "تاريخ الميلاد",
@@ -55,7 +57,8 @@ class LoginContinueSubInformation extends StatelessWidget {
               ),
             ),
           ]),
-          InputFieldWithLabel(
+          InputFieldWithLabel(controller: Get.find<LoginContinueController>().location,
+
             paddingTop: 11,
             suffix: Padding(
               padding: const EdgeInsets.only(left: 35),
@@ -68,6 +71,7 @@ class LoginContinueSubInformation extends StatelessWidget {
           ),
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             InputFieldWithLabel(
+              controller: Get.find<LoginContinueController>().weight,
               paddingTop: 12,
               hint: "70",
               label: "وزن الجسم",
@@ -81,6 +85,7 @@ class LoginContinueSubInformation extends StatelessWidget {
               ),
             ),
             InputFieldWithLabel(
+            controller:  Get.find<LoginContinueController>().typeOfDisability,
               paddingTop: 14,
               hint: "سمعية",
               label: "نوع الاعاقة",
@@ -97,6 +102,7 @@ class LoginContinueSubInformation extends StatelessWidget {
             ),
           ]),
           InputFieldWithLabel(
+            controller: Get.find<LoginContinueController>().accompanying,
             paddingTop: 14,
             suffix: Padding(
               padding: const EdgeInsets.only(left: 35),
@@ -108,7 +114,8 @@ class LoginContinueSubInformation extends StatelessWidget {
             label: "نوع المرافقة",
           ),
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-            const InputFieldWithLabel(
+             InputFieldWithLabel(
+              controller: Get.find<LoginContinueController>().relative,
                 paddingTop: 11,
                 hint: "* * * * * * * *012",
                 label: "رقم جوال أحد الاقارب",
@@ -116,7 +123,7 @@ class LoginContinueSubInformation extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(top: 18.5.h),
               child: CustomTextField(
-                controller: TextEditingController(),
+                controller:Get.find<LoginContinueController>().countryCode,
                 paddingBottom: 30.h,
                 
                 height: 46.h,
@@ -151,6 +158,7 @@ class LoginContinueSubInformation extends StatelessWidget {
             )
           ]),
           InputFieldWithLabel(
+            controller: Get.find<LoginContinueController>().whatNeed,
             paddingTop: 15,
               height: 81.h,
               hint: "ماذا تحتاج من المرافق",

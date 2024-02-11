@@ -8,10 +8,10 @@ class VerifyController extends GetxController {
   Color borderColor = AppColor.softGray;
   double borderWidth = 1;
 
-  static TextEditingController firstDigit = TextEditingController();
-  static TextEditingController secondtDigit = TextEditingController();
-  static TextEditingController thirdDigit = TextEditingController();
-  static TextEditingController fourthDigit = TextEditingController();
+  late TextEditingController firstDigit;
+  late TextEditingController secondtDigit;
+  late TextEditingController thirdDigit;
+  late TextEditingController fourthDigit;
 
   nextEvent() {
     if (fourthDigit.text +
@@ -19,14 +19,13 @@ class VerifyController extends GetxController {
             secondtDigit.text +
             firstDigit.text ==
         "1234") {
-    
-       
-
       borderColor = AppColor.primaryColor;
       borderWidth = 1.3;
-
+      firstDigit.clear();
+    secondtDigit.clear();
+    thirdDigit.clear();
+    fourthDigit.clear();
       Get.toNamed(AppRouteName.loginContinue);
-      
     } else {
       borderColor = AppColor.red;
       borderWidth = 1.3;
@@ -40,11 +39,15 @@ class VerifyController extends GetxController {
   }
 
   resendEvent() {
-    print('=======================The button is clicked!');
+    //TODO : resend code implement
   }
 
   @override
   void onInit() {
+    firstDigit = TextEditingController();
+    secondtDigit = TextEditingController();
+    thirdDigit = TextEditingController();
+    fourthDigit = TextEditingController();
     super.onInit();
   }
 
@@ -54,6 +57,7 @@ class VerifyController extends GetxController {
     secondtDigit.dispose();
     thirdDigit.dispose();
     fourthDigit.dispose();
+   
     super.dispose();
   }
 }

@@ -21,7 +21,9 @@ class InputSection extends StatelessWidget {
     return Column(
       children: [
         InputFieldWithLabel(
-          paddingBottom: 13.h,
+          controller: Get.find<ReservationLoationController>().sourceLocationController,
+
+          paddingTop: 11.h,
           suffix: Padding(
             padding:  EdgeInsets.only(left: 35.w),
             child: InkWell(
@@ -32,7 +34,8 @@ class InputSection extends StatelessWidget {
           label: "من",
         ),
         InputFieldWithLabel(
-          paddingBottom: 13.h,
+          controller:Get.find<ReservationLoationController>().destinationLocationController,
+         paddingTop: 11.h,
           suffix: Padding(
             padding:  EdgeInsets.only(left: 35.w),
             child: InkWell(

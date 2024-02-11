@@ -1,41 +1,31 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../config/routing/app_routes_name.dart';
 
+class LoginController extends GetxController {
+ late TextEditingController phoneNumber ;
+ late TextEditingController countryCode ;
 
-class LoginController  extends  GetxController{
+  FocusNode textFieldFocus = FocusNode();
 
+  void nextEvent() {
+    phoneNumber.clear();
+    countryCode.clear();
+    Get.toNamed(AppRouteName.verifyCode);
+  }
 
-
- LayerLink?  linkLayer;
-OverlayEntry? entry;
-
-static TextEditingController phoneNumber=TextEditingController();
-
-FocusNode textFieldFocus=FocusNode();
-
-nextEvent(){
-
-
-  Get.toNamed(AppRouteName.verifyCode);
-}
-
-
-
-
-
-
-
-@override
+  @override
   void onInit() {
-
-
-
-  linkLayer=LayerLink();
-    linkLayer=LayerLink();
+phoneNumber=TextEditingController();
+countryCode=TextEditingController();
     super.onInit();
   }
-  
+
+  @override
+  void dispose() {
+    phoneNumber.dispose();
+    countryCode.dispose();
+    super.dispose();
+  }
 }

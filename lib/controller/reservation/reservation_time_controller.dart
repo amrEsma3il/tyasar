@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -6,10 +5,12 @@ import 'package:get/get.dart';
 import '../../config/routing/app_routes_name.dart';
 import '../../view/widgets/reservation/reservation_time_and_checkout/reservation_time_bottomsheet_component.dart';
 
-class ReservationTimeController extends GetxController  with GetSingleTickerProviderStateMixin{
+class ReservationTimeController extends GetxController
+    with GetSingleTickerProviderStateMixin {
   int dayIndex = -1, timeFromIndex = -1, timeToIndex = -1, paymentMethod = -1;
-  static ScrollController reservationTimeScrollController = ScrollController();
-   late AnimationController animationController;
+  ScrollController reservationTimeScrollController = ScrollController();
+  TextEditingController cupon = TextEditingController();
+  late AnimationController animationController;
   late Animation<double> animation;
 
   selectDay(int index) {
@@ -34,27 +35,24 @@ class ReservationTimeController extends GetxController  with GetSingleTickerProv
   }
 
   reservationEvent(BuildContext context) {
+    animationController.forward();
 
-         animationController.forward();
+    showModalBottomSheet(
+      isDismissible: false,
+      context: context,
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              topRight: Radius.circular(48.r), topLeft: Radius.circular(48.r))),
+      builder: (context) => const ReservationBottomSheetComponent(),
+    );
 
-     showModalBottomSheet(
-      
-                          context: context,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(48.r),
-                                  topLeft: Radius.circular(48.r))),
-                          builder: (context) =>
-                              const ReservationBottomSheetComponent(),
-                        );
-                     
-                          update();
-
-
+    update();
   }
 
+  followEvent() {
+    animationController.reverse();
+    cupon.clear();
 
-   followEvent() {
     Get.offNamed(AppRouteName.companionTrack);
   }
 
@@ -65,26 +63,23 @@ class ReservationTimeController extends GetxController  with GetSingleTickerProv
   @override
   void onInit() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      reservationTimeScrollController
-          .jumpTo(reservationTimeScrollController.position.maxScrollExtent);
       reservationTimeScrollController.animateTo(
-          reservationTimeScrollController.position.minScrollExtent,
+          reservationTimeScrollController.position.maxScrollExtent - 3,
           curve: Curves.easeIn,
-          duration: const Duration(milliseconds: 550));
-          //
-        
+          duration: const Duration(milliseconds: 380));
+      //
 
-    animationController = AnimationController(
-      duration: const Duration(milliseconds: 900), 
-      vsync: this,
-    );
+      animationController = AnimationController(
+        duration: const Duration(milliseconds: 850),
+        vsync: this,
+      );
 
-    final curvedAnimation = CurvedAnimation(
-      parent: animationController,
-      curve: Curves.easeInOut, 
-    );
+      final curvedAnimation = CurvedAnimation(
+        parent: animationController,
+        curve: Curves.easeInOut,
+      );
 
-    animation = Tween<double>(begin: 0, end: 1).animate(curvedAnimation);
+      animation = Tween<double>(begin: 0, end: 1).animate(curvedAnimation);
       update();
     });
 
@@ -95,6 +90,7 @@ class ReservationTimeController extends GetxController  with GetSingleTickerProv
   void dispose() {
     animationController.dispose();
     reservationTimeScrollController.dispose();
+    cupon.dispose();
     super.dispose();
   }
 }
