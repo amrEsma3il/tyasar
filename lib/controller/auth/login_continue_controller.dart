@@ -27,10 +27,9 @@ class LoginContinueController extends GetxController {
     if (informationPageSelector) {
       informationPageSelector = false;
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        continueLogincrollController.animateTo(
-            continueLogincrollController.position.maxScrollExtent - 42,
-            duration: const Duration(milliseconds: 300),
-            curve: Curves.easeIn);
+        continueLogincrollController.jumpTo(
+            continueLogincrollController.position.maxScrollExtent - 48,
+           );
         update();
       });
       update();

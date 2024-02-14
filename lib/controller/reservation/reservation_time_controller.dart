@@ -63,10 +63,9 @@ class ReservationTimeController extends GetxController
   @override
   void onInit() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      reservationTimeScrollController.animateTo(
-          reservationTimeScrollController.position.maxScrollExtent - 3,
-          curve: Curves.easeIn,
-          duration: const Duration(milliseconds: 380));
+      reservationTimeScrollController.jumpTo(
+          reservationTimeScrollController.position.maxScrollExtent,
+        );
       //
 
       animationController = AnimationController(

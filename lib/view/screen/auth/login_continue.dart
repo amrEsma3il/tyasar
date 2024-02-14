@@ -16,12 +16,7 @@ class LoginContinue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _buildBody(context),
-    );
-  }
-
-  Widget _buildBody(BuildContext context) {
-    return SafeArea(
+      body: SafeArea(
       child: SizedBox(
         height: MediaQuery.of(context).size.height,
         child: Stack(
@@ -62,6 +57,9 @@ class LoginContinue extends StatelessWidget {
           ],
         ),
       ),
+    ),
     );
   }
+
+
 }

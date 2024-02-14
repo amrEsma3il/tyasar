@@ -11,11 +11,7 @@ class VerifyCode extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: buildBody(context));
-  }
-
-  Widget buildBody(BuildContext context) {
-    return SafeArea(
+    return Scaffold(body: SafeArea(
         child: SizedBox(
       height: MediaQuery.of(context).size.height,
       child: Stack(
@@ -44,6 +40,8 @@ class VerifyCode extends StatelessWidget {
           const VerifyArrowBack(),
         ],
       ),
-    ));
+    )));
   }
+
+
 }
