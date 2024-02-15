@@ -6,7 +6,7 @@ import 'package:tyasart/core/constant/color.dart';
 import '../../../config/themes/styles.dart';
 import '../../../controller/reservation/reservation_track_controller.dart';
 import '../../../core/constant/imgaeasset.dart';
-import '../../../core/utilits/models/map_custom_styles.dart';
+import '../../../core/utilits/classes/map_custom_styles.dart';
 import '../../../core/utilits/widgets/custom_submattied_button.dart';
 import '../../../core/utilits/widgets/line_divider.dart';
 import '../../../core/utilits/widgets/screen_header.dart';
