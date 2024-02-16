@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import '../../core/utilits/classes/map_custom_styles.dart';
+
 class ReservationTrackController extends GetxController {
   String? mapStyle;
    bool showMap = false;
@@ -16,10 +18,18 @@ class ReservationTrackController extends GetxController {
     update();
   }
 
+  addAccompionToLovedEvent(){
+// implement adding to love list here
+  }
+    vhatWithAccompionEvent(){
+// implement chatting  here
+    }
+
 
 mapVisibility(){
 
 showMap=!showMap;
+
   update();
 }
 
@@ -27,7 +37,9 @@ showMap=!showMap;
 toggleMapTheme(){
 
   isLight=!isLight;
-  update();
+   update();
+  mapController!.setMapStyle(isLight? MapStyle.lightGreen:MapStyle.greenDarkSpy);
+
 }
 
 

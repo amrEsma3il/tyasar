@@ -28,7 +28,7 @@ class Tyasart extends StatelessWidget {
           initialBinding: AppBindings(),
           locale: const Locale('ar'),
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
+       
           getPages: routes,
             theme: ThemeData(
         inputDecorationTheme: const InputDecorationTheme(suffixIconColor:AppColor.iconsColor
@@ -38,7 +38,7 @@ class Tyasart extends StatelessWidget {
           ),
         
         );},
-      // child:
+  
     );
   }
 }

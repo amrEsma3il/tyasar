@@ -1,5 +1,4 @@
 class AppImageAsset {
-
   // auth
   static const String rootImages = "assets/imgs";
   static const String splashScreen = "$rootImages/splash_screen.png";
@@ -17,7 +16,8 @@ class AppImageAsset {
   static const String backArrow = "$rootImages/Back.svg";
 
   //reservation time
-  static const String reservationLocation = "$rootImages/reservation_location.png";
+  static const String reservationLocation =
+      "$rootImages/reservation_location.png";
 
   static const String reservationCheck = "$rootImages/reservation_check.png";
 
@@ -25,12 +25,11 @@ class AppImageAsset {
   static const String visa = "$rootImages/visa.png";
   static const String prePaid = "$rootImages/prepaid.png";
 
-
   //track Screen
 
   static const String accompion = "$rootImages/accompion.png";
 
-    static const String star = "$rootImages/Star.png";
+  static const String star = "$rootImages/Star.png";
   static const String heart = "$rootImages/heart.png";
 
   static const String message = "$rootImages/Message.png";
@@ -38,5 +37,12 @@ class AppImageAsset {
   static const String clock = "$rootImages/clock.png";
   static const String checkDay = "$rootImages/day_check.png";
   static const String icPickMap = "$rootImages/ic_pick_map .png";
-   static const String icFlagMap = "$rootImages/ic_flag_map.png";
+  static const String icFlagMap = "$rootImages/ic_flag_map.png";
+
+  // track stipper
+
+  static const String trackSearch = "assets/imgs/track_search.png";
+  static const String compionProposal = "$rootImages/compion_proposal.png";
+  static const String trackOnWay = "$rootImages/track_on_way.png";
+  static const String accompionArrive = "$rootImages/accompion_arrive.png";
 }
