@@ -41,8 +41,15 @@ class AppImageAsset {
 
   // track stipper
 
-  static const String trackSearch = "assets/imgs/track_search.png";
+  static const String trackSearch = "$rootImages/track_search.png";
   static const String compionProposal = "$rootImages/compion_proposal.png";
   static const String trackOnWay = "$rootImages/track_on_way.png";
   static const String accompionArrive = "$rootImages/accompion_arrive.png";
+
+  // bottom nav var
+
+  static const String home = "$rootImages/home.png";
+  static const String notification = "$rootImages/notification.png";
+  static const String profile = "$rootImages/profile.png";
+  static const String chat = "$rootImages/chat.png";
 }

@@ -2,6 +2,7 @@
 import 'package:get/get.dart';
 
 
+import '../../view/screen/main_screen.dart';
 import '../../view/screen/reservation/companion_track.dart';
 import '../../view/screen/reservation/reservation_time_and_checkout.dart';
 import '../../view/screen/reservation/reservayion_destination.dart';
@@ -13,6 +14,11 @@ import 'app_routes_name.dart';
 
 
 List<GetPage<dynamic>>? routes = [
+          GetPage(
+      page: () => const MainScreen(),
+      name: AppRouteName.mainScreen,
+      transition: Transition.leftToRightWithFade,
+      transitionDuration: const Duration(milliseconds: 350)),
 
   GetPage(
       page: () => const OnBoarding(),
@@ -20,6 +26,11 @@ List<GetPage<dynamic>>? routes = [
   GetPage(
       page: () => const Login(),
       name: AppRouteName.login,
+      transition: Transition.leftToRightWithFade,
+      transitionDuration: const Duration(milliseconds: 350)),
+        GetPage(
+      page: () => const MainScreen(),
+      name: AppRouteName.mainScreen,
       transition: Transition.leftToRightWithFade,
       transitionDuration: const Duration(milliseconds: 350)),
   GetPage(
