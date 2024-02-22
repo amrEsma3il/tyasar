@@ -14,7 +14,7 @@ import '../../../core/utilits/widgets/screen_shadow_corner_effect.dart';
 
 import '../../widgets/reservation/reservation_time_and_checkout/reservation_checkout/reservasion_checkout_section.dart';
 import '../../widgets/reservation/reservation_time_and_checkout/reservation_time/reservation_time_and_day_section.dart';
-import '../../../core/utilits/widgets/screen_header.dart';
+import '../../../core/utilits/widgets/screen_header_with_icon.dart';
 
 class ReservationTime extends StatelessWidget {
   const ReservationTime({super.key});
@@ -37,7 +37,7 @@ class ReservationTime extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const ScreenHeader(
+                    const ScreenHeaderWithIcon(
                         icon: AppImageAsset.backArrow, title: "الوقت المناسب"),
                     SizedBox(
                       height: 40.h,

@@ -5,6 +5,7 @@ import 'package:tyasart/controller/auth/verfiy_code_controller.dart';
 import 'controller/auth/login_continue_controller.dart';
 import 'controller/auth/login_controller.dart';
 import 'controller/main_scren_controller.dart';
+import 'controller/notification/notification_controller.dart';
 import 'controller/onboarding/onboarding_controller.dart';
 import 'controller/reservation/reservation_location_controller.dart';
 import 'controller/reservation/reservation_time_controller.dart';
@@ -27,8 +28,9 @@ class AppBindings extends Bindings{
         Get.lazyPut(() => ReservationTimeController(),fenix:true ); 
            Get.lazyPut(() => ReservationTrackController(),fenix:true );
                       Get.lazyPut(() => MainScreenController(),fenix:true );
+                               Get.lazyPut(() => NotificationContoller(),fenix:true );
 
-
+//
 
     //resources
     final sharedPreferences = await SharedPreferences.getInstance();

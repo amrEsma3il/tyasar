@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tyasart/core/utilits/extensions/color_formatter.dart';
 
 class AppColor {
+  
   static const Color grey = Color(0xff8e8e8e);
   static const Color black = Color(0xff000000);
   static const Color primaryColor = Color(0xFF1F8189);
@@ -28,4 +30,6 @@ class AppColor {
    static const Color darkMapThemeContiner= Color(0xFF576961);
    static const Color darkMapThemeContent= Color(0xFF9DA09F);
    static const Color darkMapThemeButton= Color(0xFF3A6A57);
+      static  Color activeUser= "#15B826".toColor;
+
 }

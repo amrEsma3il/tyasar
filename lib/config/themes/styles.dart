@@ -12,7 +12,12 @@ class TextStyles {
     color: Colors.black,
   );
 
-
+static TextStyle textHeaderStyle=TextStyle(
+                  color: AppColor.black,
+                  height: 0.7,
+                  letterSpacing: -2,
+                  fontSize: 26.sp,
+                  fontWeight: FontWeight.w700);
   
 
   static TextStyle font32BlueBold = TextStyle(

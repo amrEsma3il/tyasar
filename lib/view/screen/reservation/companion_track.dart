@@ -7,7 +7,7 @@ import '../../../controller/reservation/reservation_track_controller.dart';
 import '../../../core/constant/imgaeasset.dart';
 import '../../../core/utilits/widgets/custom_submattied_button.dart';
 import '../../../core/utilits/widgets/line_divider.dart';
-import '../../../core/utilits/widgets/screen_header.dart';
+import '../../../core/utilits/widgets/screen_header_with_icon.dart';
 import '../../widgets/reservation/reservation_track/accompion_date_info_section/accompion_date_section.dart';
 import '../../widgets/reservation/reservation_track/accompion_info_section/accompion_info_section.dart';
 import '../../widgets/reservation/reservation_track/map_section.dart';
@@ -34,7 +34,7 @@ class CompanionTrack extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        ScreenHeader(
+                        ScreenHeaderWithIcon(
                             headerColor: trackController.isLight
                                 ? AppColor.black
                                 : const Color.fromARGB(255, 195, 205, 200),

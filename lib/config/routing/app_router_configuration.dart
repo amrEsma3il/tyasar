@@ -2,7 +2,7 @@
 import 'package:get/get.dart';
 
 
-import '../../view/screen/main_screen.dart';
+import '../../view/screen/core_screen.dart';
 import '../../view/screen/reservation/companion_track.dart';
 import '../../view/screen/reservation/reservation_time_and_checkout.dart';
 import '../../view/screen/reservation/reservayion_destination.dart';

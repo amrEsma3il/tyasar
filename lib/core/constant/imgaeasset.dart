@@ -52,4 +52,12 @@ class AppImageAsset {
   static const String notification = "$rootImages/notification.png";
   static const String profile = "$rootImages/profile.png";
   static const String chat = "$rootImages/chat.png";
+
+
+  // profile 
+  static const logOut="$rootImages/logout.png";
+   static const help="$rootImages/help.png";
+    static const imgProfile="$rootImages/profile_image.png";
+     static const recentConnect="$rootImages/recent_connect.png";
+         static const editProfile="$rootImages/edit_profile.png";
 }
