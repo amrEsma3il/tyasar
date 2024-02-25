@@ -21,7 +21,7 @@ class CustomDotControllerCurosal extends StatelessWidget {
                      HomeStaticDataSources.homeBannerList.length,
                       (index) => AnimatedContainer(
                             margin: const EdgeInsets.only(right: 5),
-                            duration: const Duration(seconds: 4),
+                            duration: const Duration(milliseconds: 500),
                             width: controller.currentPage == index ? 12.w : 5.w,
                             height: 6.h,
                             decoration: BoxDecoration(

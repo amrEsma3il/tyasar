@@ -15,8 +15,8 @@ import '../../widgets/reservation/reservation_track/map_section.dart';
 import '../../widgets/reservation/reservation_track/track_stipper_section/track_stipper_section.dart';
 
 class CompanionTrack extends StatelessWidget {
- final AccompionInfoModel accompionInfoEntity;
-   const CompanionTrack({super.key,required this.accompionInfoEntity});
+ final AccompionInfoModel? accompionInfoEntity;
+   const CompanionTrack({super.key, this.accompionInfoEntity});
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +55,7 @@ class CompanionTrack extends StatelessWidget {
                         SizedBox(
                           height: 17.h,
                         ),
-                         AccompionInfo(trackController: trackController,accompionInfoEntity: accompionInfoEntity,width: 343),
+                         AccompionInfo(trackController: trackController,accompionInfoEntity: accompionInfoEntity??AccompionInfoModel(name: "عمرو اسماعيل",bio: "مطور تطبيقات الهاتف",imgProfile: AppImageAsset.accompion,rate: "5.5" ),width: 343),
                         SizedBox(height: 16.h),
                           AccompionDateSection(trackController: trackController,),
                         SizedBox(height: 17.h),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:tyasart/config/routing/app_routes_name.dart';
+import 'package:tyasart/core/utilits/widgets/line_divider.dart';
 
 import '../../../../config/themes/styles.dart';
 import '../../../../controller/reservation/reservation_time_controller.dart';
@@ -28,7 +30,7 @@ class ReservationBottomSheetComponent extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Container(
                   
-                 
+                 padding: EdgeInsets.symmetric(horizontal: 5.w),
                   width: Get.width,
                   height:342.h,
                   decoration: BoxDecoration(
@@ -71,13 +73,31 @@ class ReservationBottomSheetComponent extends StatelessWidget {
                         colorButtom: AppColor.primaryColor,
                         width: 343.w,
                         height:controller.animation.value* 56.h,
-                        onPressed: () {
-                
-                     Get.find<ReservationTimeController>().followEvent();
-                        },
-                        textWidget: Text(
-                          "تتبع المرافق",
-                          style: TextStyles.font16WhiteSemiBold,
+                     
+                        textWidget: Padding(
+                          padding:  EdgeInsets.symmetric(horizontal: 10.w),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            InkWell(
+                            onTap: () {
+                              Get.offNamed(AppRouteName.mainScreen)     ;                     },
+                            child: Text(  "الي الصفحة الرئيسية",
+                              style: TextStyles.font16WhiteSemiBold,),
+                            )
+                            ,Padding(
+                              padding:  EdgeInsets.only(left: 30.w),
+                              child: DividerLine(width: 1.5.h,height: 30.h,color: AppColor.white,),
+                            ),
+                           InkWell(onTap: (){
+                            Get.find<ReservationTimeController>().followEvent();
+                           }, child:   Text(
+                              "إحجز الان",
+                              style: TextStyles.font16WhiteSemiBold,
+                            )),
+                          ],
+                                                ),
                         ),
                       )
                     ],

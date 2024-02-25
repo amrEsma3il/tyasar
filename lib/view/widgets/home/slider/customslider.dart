@@ -14,7 +14,7 @@ class CustomSliderCurosal extends StatelessWidget {
     return SizedBox(height: 152.h,
       child: PageView.builder(
         
-        physics: const NeverScrollableScrollPhysics(),
+       itemCount: HomeStaticDataSources.homeBannerList.length ,
           controller:    Get.find<HomeController>().pageController,
           onPageChanged: (val) {
                Get.find<HomeController>().onPageChangedEvent(val);

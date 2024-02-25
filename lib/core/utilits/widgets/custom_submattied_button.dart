@@ -12,7 +12,7 @@ class CustomSubmattiedButton extends StatelessWidget {
     Key? key,
     required this.width,
     required this.height,
-    required this.onPressed,
+     this.onPressed,
      this.colorButtom=AppColor.mainBlue, required this.textWidget,
   }) : super(key: key);
   @override

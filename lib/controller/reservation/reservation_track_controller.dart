@@ -38,7 +38,7 @@ toggleMapTheme(){
 
   isLight=!isLight;
    update();
-  mapController!.setMapStyle(isLight? MapStyle.lightGreen:MapStyle.greenDarkSpy);
+  mapController?.setMapStyle(isLight? MapStyle.lightGreen:MapStyle.greenDarkSpy);
 
 }
 

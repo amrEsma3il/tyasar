@@ -36,31 +36,31 @@ goToReservationAccompionTrackEvent(AccompionInfoModel accompionInfobtity){
     super.onInit();
 
 
-  changePageTimer=  Timer.periodic(const Duration(seconds: 5), (Timer timer) {
-    if (currentPage < HomeStaticDataSources.homeBannerList.length-1) {
-      currentPage++;
+//   changePageTimer=  Timer.periodic(const Duration(seconds: 5), (Timer timer) {
+//     if (currentPage < HomeStaticDataSources.homeBannerList.length-1) {
+//       currentPage++;
     
-    } else {
-      currentPage = 0;
+//     } else {
+//       currentPage = 0;
 
       
-    }
-update();
+//     }
+// update();
 
-      pageController.animateToPage(
+//       pageController.animateToPage(
         
-          currentPage,
+//           currentPage,
           
-          duration: const Duration(seconds: 4),
-    curve: Curves.easeInOut,
-      );
-  });
+//           duration: const Duration(seconds: 4),
+//     curve: Curves.easeInOut,
+//       );
+//   });
   }
 
  @override
   void dispose() {
 searchAccompion!.dispose();
-pageController.dispose();
+// pageController.dispose();
     super.dispose();
   }
 }
