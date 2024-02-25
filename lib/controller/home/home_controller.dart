@@ -26,7 +26,7 @@ class HomeController extends GetxController {
 
 goToReservationAccompionTrackEvent(AccompionInfoModel accompionInfobtity){
 
-
+searchAccompion!.clear();
   Get.toNamed(AppRouteName.companionTrack,arguments:accompionInfobtity );
 }
   @override
@@ -36,31 +36,14 @@ goToReservationAccompionTrackEvent(AccompionInfoModel accompionInfobtity){
     super.onInit();
 
 
-//   changePageTimer=  Timer.periodic(const Duration(seconds: 5), (Timer timer) {
-//     if (currentPage < HomeStaticDataSources.homeBannerList.length-1) {
-//       currentPage++;
-    
-//     } else {
-//       currentPage = 0;
 
-      
-//     }
-// update();
 
-//       pageController.animateToPage(
-        
-//           currentPage,
-          
-//           duration: const Duration(seconds: 4),
-//     curve: Curves.easeInOut,
-//       );
-//   });
   }
 
  @override
   void dispose() {
 searchAccompion!.dispose();
-// pageController.dispose();
+pageController.dispose();
     super.dispose();
   }
 }
