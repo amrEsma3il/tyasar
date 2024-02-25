@@ -26,7 +26,7 @@ class Notifications extends StatelessWidget {
           ),
           Expanded(
               child: GetBuilder<NotificationContoller>(builder: (controller) {
-            return ListView.builder(
+            return controller.notificationList.isEmpty?Center(child: Text("لا يوجد اي اشعارات",style: TextStyles.font22Black400Weight,),):ListView.builder(
               itemCount: controller.notificationList.length + 1,
               itemBuilder: (context, index) => index ==
                       controller.notificationList.length
