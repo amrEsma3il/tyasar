@@ -4,9 +4,11 @@
 
 import '../../../model/notification/notification_model.dart';
 
-class NotificatioDataSource {}
+class NotificatioDataSource {
 
-List<NotificationModel>  notificationsFetch = [
+  // stupid to use static here ....i know cause the object is mutable in real but we just simulate ....relax bro !!
+
+static List<NotificationModel>  notificationsFetch = [
     NotificationModel(
         title: "تم قبول طلبك بواسطه المرافق بنجاح",
         body: 'هذا نص بواسطه المصمم لجعله نص حقيقي' ,
@@ -25,3 +27,4 @@ List<NotificationModel>  notificationsFetch = [
         date: "2023/8/4"),
   ];
 
+}

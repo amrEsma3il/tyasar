@@ -31,5 +31,13 @@ class AppColor {
    static const Color darkMapThemeContent= Color(0xFF9DA09F);
    static const Color darkMapThemeButton= Color(0xFF3A6A57);
       static  Color activeUser= "#15B826".toColor;
+      // home 
+      static  Color softPink= "#FFE2D4".toColor;
+
+      //categories colers
+
+         static  Color catOne= "#29D697".toColor;
+            static  Color catTwo= "#F59762".toColor;
+               static  Color catThree= "#F0635A".toColor;
 
 }

@@ -60,4 +60,6 @@ class AppImageAsset {
     static const imgProfile="$rootImages/profile_image.png";
      static const recentConnect="$rootImages/recent_connect.png";
          static const editProfile="$rootImages/edit_profile.png";
+     //home
+         static const bannerIage="$rootImages/banner_image.png";
 }

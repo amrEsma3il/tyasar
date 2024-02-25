@@ -34,13 +34,9 @@ class ScreenHeaderWithIcon extends StatelessWidget {
             child: Stack(
               alignment: Alignment.center,
               children: [
-                Positioned.fill(
-                  child: Container(
-                    alignment: Alignment.center,
-                  ),
-                ),
+                
                 Text(title!,
-                    style: TextStyles.textHeaderStyle,
+                    style: TextStyles.textHeaderStyle.copyWith(color: headerColor),
                     textAlign: TextAlign.center),
               ],
             ),

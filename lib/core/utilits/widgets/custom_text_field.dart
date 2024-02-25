@@ -10,7 +10,7 @@ import '../../../config/themes/styles.dart';
 // ignore: must_be_immutable
 class CustomTextField extends StatelessWidget {
   int? maxLines;
-  
+  FocusNode ?focusNode;
   String? hintText;
   double? width,height,paddingBottom,paddingTop;
   void Function()? suffixIconHitEvent;
@@ -25,6 +25,7 @@ class CustomTextField extends StatelessWidget {
    CustomTextField({
     Key? key,
     this.hintText,
+    this.focusNode,
     this.paddingTop=0,
     this.maxLines=1,
    required this.controller,
@@ -54,7 +55,7 @@ class CustomTextField extends StatelessWidget {
         border: Border.all(width:1,color: AppColor.softGray)),
       
       child: TextFormField(
-        
+        focusNode: focusNode,
         maxLines: maxLines!,
         controller: controller
         ,
@@ -84,14 +85,7 @@ class CustomTextField extends StatelessWidget {
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none,
                     focusedErrorBorder: InputBorder.none,
-      //    focusedBorder: OutlineInputBorder(
-      //       borderSide: const BorderSide(color:AppColor.softGray, width: 1.0),
-      //       borderRadius: BorderRadius.circular(30)
-      //  ) ,
-      //        enabledBorder:  OutlineInputBorder(
-      //       borderSide: const BorderSide(color:AppColor.softGray, width: 1.0),
-      //       borderRadius: BorderRadius.circular(30)
-      //  ),
+
       )),
     );
   }

@@ -2,6 +2,7 @@
 import 'package:get/get.dart';
 
 
+import '../../view/screen/chat/chat.dart';
 import '../../view/screen/core_screen.dart';
 import '../../view/screen/reservation/companion_track.dart';
 import '../../view/screen/reservation/reservation_time_and_checkout.dart';
@@ -54,8 +55,13 @@ List<GetPage<dynamic>>? routes = [
       transition: Transition.fadeIn,
       transitionDuration: const Duration(milliseconds: 350)),
                GetPage(
-      page: () => const CompanionTrack(),
+      page: () =>  CompanionTrack(accompionInfoEntity: Get.arguments),
       name: AppRouteName.companionTrack,
+      transition: Transition.fadeIn,
+      transitionDuration: const Duration(milliseconds: 450)),
+                   GetPage(
+      page: () =>  Chat(imgProfile: Get.arguments["imgProfile"],username: Get.arguments["username"]),
+      name: AppRouteName.chat,
       transition: Transition.fadeIn,
       transitionDuration: const Duration(milliseconds: 450)),
 ];

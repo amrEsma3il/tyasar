@@ -5,7 +5,7 @@ import '../../data/model/notification/notification_model.dart';
 
 class NotificationContoller extends GetxController{
 
-List<NotificationModel> notificationList=notificationsFetch;
+List<NotificationModel> notificationList=NotificatioDataSource.notificationsFetch;
 deleteAllNotifications(){
 
   notificationList.clear();

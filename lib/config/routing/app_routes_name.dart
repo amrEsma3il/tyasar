@@ -10,6 +10,7 @@ static const String reservationDestination = "/reservationDestination";
 static const String reservationTime = "/reservationTime"; 
 static const String companionTrack="/companionTrack";
 static const String mainScreen="/";
+static const String chat="/chat";
 
 
 }
