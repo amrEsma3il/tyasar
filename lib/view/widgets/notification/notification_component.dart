@@ -32,7 +32,7 @@ class NotificationComponent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(notificationEntity.title,style: TextStyles.font16greenSoft.copyWith(color: AppColor.black),),
+              Text(notificationEntity.title,style: TextStyles.font16greenSoft.copyWith(color: AppColor.black,height: 1.3),),
                Text(notificationEntity.body,style: TextStyles.font16greenSoft.copyWith(fontWeight: FontWeight.w500,fontSize: 14.sp)),
                Row(
                 children: [
